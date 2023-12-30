@@ -1,0 +1,115 @@
+[
+    {
+        "skillName": "PHP",
+        "skillPicture": "php.svg"
+    },
+    {
+        "skillName": "CodeIgniter",
+        "skillPicture": "codeigniter.svg"
+    },
+    {
+        "skillName": "JavaScript",
+        "skillPicture": "javascript.svg"
+    },
+    {
+        "skillName": "HTML",
+        "skillPicture": "html.svg"
+    },
+    {
+        "skillName": "CSS",
+        "skillPicture": "css.svg"
+    },
+    {
+        "skillName": "MySQL",
+        "skillPicture": "mysql.svg"
+    },
+    {
+        "skillName": "Bootstrap",
+        "skillPicture": "bootstrap.svg"
+    },
+    {
+        "skillName": "jQuery",
+        "skillPicture": "jquery.svg"
+    },
+    {
+        "skillName": "Git",
+        "skillPicture": "git.svg"
+    },
+    {
+        "skillName": "GitHub",
+        "skillPicture": "github.svg"
+    },
+    {
+        "skillName": "Node.js",
+        "skillPicture": "node.svg"
+    },
+    {
+        "skillName": "Next.js",
+        "skillPicture": "nextjs.svg"
+    },
+    
+    {
+        "skillName": "WordPress",
+        "skillPicture": "wordpress.svg"
+    },
+    {
+        "skillName": "VS Code",
+        "skillPicture": "vscode.svg"
+    },
+    {
+        "skillName": "AWS",
+        "skillPicture": "aws.svg"
+    },
+    {
+        "skillName": "GCP",
+        "skillPicture": "gcp.svg"
+    },
+    {
+        "skillName": "Figma",
+        "skillPicture": "figma.svg"
+    },
+    {
+        "skillName": "Adobe Photoshop",
+        "skillPicture": "photoshop.svg"
+    },
+    {
+        "skillName": "Styled Components",
+        "skillPicture": "styledcomponents.svg"
+    },
+    {
+        "skillName": "Chrome DevTools",
+        "skillPicture": "chrome.svg"
+    },
+    {
+        "skillName": "NPM",
+        "skillPicture": "npm.svg"
+    },
+    {
+        "skillName": "Netlify",
+        "skillPicture": "netlify.svg"
+    },
+    {
+        "skillName": "Vercel",
+        "skillPicture": "vercel.svg"
+    },
+    {
+        "skillName": "Replit",
+        "skillPicture": "replit.svg"
+    },
+    {
+        "skillName": "Astro",
+        "skillPicture": "astro.svg"
+    },
+    {
+        "skillName": "Canva",
+        "skillPicture": "canva.svg"
+    },
+    {
+        "skillName": "Streamlit",
+        "skillPicture": "streamlit.svg"
+    },
+    {
+        "skillName": "cPanel",
+        "skillPicture": "cpanel.svg"
+    }
+]

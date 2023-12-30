@@ -1,0 +1,32 @@
+[
+    {
+        "heroName": "Jonathan Mircha",
+        "heroPicture": "jon.jpg",
+        "heroDescription": "Profesor, desarrollador web con más de 15 años de experiencia en el sector, y creador de contenido educativo de programación."
+    },
+    {
+        "heroName": "Miguel Ángel Durán",
+        "heroPicture": "midudev.jpg",
+        "heroDescription": "Desarrollador Web Full Stack con más de 15 años de experiencia, GitHub Star, Google Dev Expert y creador de contenido de programación."
+    },
+    {
+        "heroName": "Marcelo Vásquez",
+        "heroPicture": "s4vitar.jpg",
+        "heroDescription": "Pentester con más de 7 años de experiencia y creador de contenido de hacking ético y ciberseguridad."
+    },
+    {
+        "heroName": "Alejandro Taboada",
+        "heroPicture": "ats.jpg",
+        "heroDescription": "Creador de contenido de programación en Python, C, C++, Java entre otros lenguajes."
+    },
+    {
+        "heroName": "Guillermo Rauch",
+        "heroPicture": "rauch.jpg",
+        "heroDescription": "Creador de populares herramientas y frameworks como  Socket.io, Mongoose y Next.js y actualmente CEO y fundador de Vercel."
+    },
+    {
+        "heroName": "Miguel de Icaza",
+        "heroPicture": "icaza.jpg",
+        "heroDescription": "Desarrollador de software y creador de grandes proyectos de software libre como GNOME, el proyecto Mono y Xamarin."
+    }
+]

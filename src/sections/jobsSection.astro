@@ -1,0 +1,30 @@
+---
+import JobCard from "../components/JobCard.astro";
+import jobs from "../data/jobs.json";
+---
+
+<section class="flex flex-col pt-16 pb-20 gap-16" id="jobs">
+    <h1
+        class="font-black text-light-texto-primary dark:text-dark-texto-primary text-[2.5rem]"
+    >
+        Experience<span class="text-primary">.</span>
+    </h1>
+    <div class="relative flex flex-col gap-20">
+        {jobs.map((job) => <JobCard {...job} />)}
+        <div
+            class="absolute left-0 border-l-[1px] h-full z-[-1] border-dashed border-light-gray-secondary dark:border-dark-gray-secondary sm:left-[50%]"
+        >
+        </div>
+    </div>
+</section>
+<script>
+    const $accordionButtons = document.querySelectorAll(".accordion-button");
+    $accordionButtons.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            const accordionId = event.currentTarget.getAttribute("data-target");
+            const $accordion = document.getElementById(accordionId);
+            $accordion.classList.toggle("max-h-accordion-expanded");
+            event.currentTarget.classList.toggle("expanded");
+        });
+    });
+</script>

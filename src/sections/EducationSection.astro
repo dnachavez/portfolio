@@ -1,0 +1,15 @@
+---
+import EducationCard from "../components/EducationCard.astro";
+import educationDegrees from "../data/education.json";
+---
+
+<section class="flex flex-col pt-16 pb-20 gap-16" id="education">
+    <h1
+        class="font-black text-light-texto-primary dark:text-dark-texto-primary text-3xl sm:text-4xl"
+    >
+        Education<span class="text-primary">.</span>
+    </h1>
+    <div class="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
+        {educationDegrees.map((education) => <EducationCard {...education} />)}
+    </div>
+</section>

@@ -1,0 +1,523 @@
+<div class="" id="topbar-menu-container">
+    <button
+        data-active="false"
+        id="topbar-menu-button"
+        class="p-2 group relative rounded-xl text-light-gray-primary dark:text-dark-gray-primary hover:bg-[#0001] dark:hover:bg-[#fff1] hover:text-light-texto-primary dark:hover:text-dark-texto-primary data-[active=true]:z-[51]"
+    >
+        <svg
+            class="rotate-180 group-data-[active=true]:hidden"
+            width="24"
+            height="24"
+            stroke-width="1.7"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="currentColor"
+            ><path
+                d="M3 5h8M3 12h13M3 19h18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path></svg
+        >
+
+        <svg
+            class="hidden group-data-[active=true]:flex"
+            width="28"
+            height="28"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="currentColor"
+            ><path
+                d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path></svg
+        >
+    </button>
+    <ul
+        data-active=""
+        data-icon=""
+        id="topbar-menu"
+        class="group/icon data-[active=true]:flex flex-col justify-center gap-1 fixed right-0 data-[active=true]:top-0 -top-[200%] w-[100dvw] h-[100dvh] z-50 border-[#0001] dark:border-[#fff1] bg-light-fondo-secondary dark:bg-dark-fondo-secondary overflow-hidden transition-all overflow-y-scroll"
+        style="transition-duration: 300ms"
+    >
+        <li>
+            <a
+                data-icon="skills"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="#skills"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="0.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"
+                    />
+                </svg>
+                Skills</a
+            >
+        </li>
+        <li>
+            <a
+                data-icon="jobs"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="#jobs"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><rect x="2" y="7" width="20" height="14" rx="2" ry="2"
+                    ></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
+                    ></path></svg
+                >
+                Experience</a
+            >
+        </li>
+        <li>
+            <a
+                data-icon="projects"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="#projects"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path
+                        d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"
+                    ></path><path d="M17.64 15 22 10.64"></path><path
+                        d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"
+                    ></path></svg
+                >
+                Projects</a
+            >
+        </li>
+        <li>
+            <a
+                data-icon="education"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="#education"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path
+                        d="M6 12v5c3 3 9 3 12 0v-5"></path></svg
+                >
+                Education</a
+            >
+        </li>
+        <li>
+            <a
+                data-icon="linkedin"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="https://linkedin.com/in/dnachavez"
+                target="_blank"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    ></path><rect x="2" y="9" width="4" height="12"
+                    ></rect><circle cx="4" cy="4" r="2"></circle></svg
+                >
+                LinkedIn</a
+            >
+        </li>
+        <li>
+            <a
+                data-icon="github"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="https://github.com/dnachavez"
+                target="_blank"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path
+                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                    ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
+                >
+                GitHub</a
+            >
+        </li>
+        <li>
+            <a
+                data-icon="instagram"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="https://www.instagram.com/dnachavez"
+                target="_blank"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><rect x="2" y="2" width="20" height="20" rx="5" ry="5"
+                    ></rect><path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                Instagram
+            </a>
+        </li>
+        <li>
+            <a
+                data-icon="tiktok"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="https://www.tiktok.com/@dnachavez"
+                target="_blank"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="2"
+                    clip-rule="evenodd"
+                    viewBox="0 0 24 24"
+                    id="tiktok"
+                >
+                    <g transform="translate(-40 -40)">
+                        <rect
+                            width="24"
+                            height="24"
+                            x="40"
+                            y="40"
+                            fill="none"
+                        ></rect>
+                        <path
+                            fill="currentColor"
+                            d="M17.897,9.83L17.897,16.18C17.897,20.398 15.386,25.082 9.183,25.082C4.4,25.061 0.476,21.119 0.476,16.336C0.476,16.262 0.477,16.188 0.479,16.108C0.619,11.492 4.455,7.772 9.073,7.772C9.5,7.772 9.927,7.804 10.35,7.867C10.879,7.947 11.271,8.402 11.271,8.937L11.271,13.059C11.271,13.395 11.115,13.711 10.849,13.916C10.583,14.121 10.238,14.19 9.913,14.105C9.705,14.05 9.49,14.022 9.274,14.022C7.937,14.022 6.824,15.091 6.77,16.427L6.764,16.591C6.764,17.776 7.739,18.752 8.924,18.752L9.403,18.753C10.582,18.753 11.552,17.783 11.552,16.603L11.541,16.336L11.541,0C11.541,-0.597 12.026,-1.082 12.623,-1.082L16.7,-1.082C17.231,-1.082 17.684,-0.696 17.768,-0.172C18.061,1.652 18.617,2.797 19.451,3.513C20.292,4.235 21.38,4.513 22.611,4.71C23.136,4.794 23.522,5.247 23.522,5.778L23.522,9.913C23.522,10.215 23.395,10.504 23.173,10.708C22.951,10.913 22.653,11.016 22.352,10.991C20.806,10.864 19.299,10.47 17.897,9.83ZM15.809,1.082L13.705,1.082L13.705,16.298C13.712,16.399 13.716,16.501 13.716,16.603C13.716,18.969 11.769,20.916 9.403,20.916C9.32,20.916 9.237,20.914 9.154,20.908C9.078,20.913 9.001,20.915 8.924,20.915C6.552,20.915 4.601,18.963 4.601,16.591C4.601,16.499 4.604,16.406 4.608,16.339C4.707,13.907 6.692,11.948 9.107,11.862L9.107,9.936L9.073,9.935C5.617,9.935 2.746,12.72 2.641,16.169C2.64,16.224 2.639,16.28 2.639,16.336C2.639,19.936 5.593,22.903 9.188,22.918C13.864,22.918 15.733,19.362 15.733,16.18L15.733,8.013C15.733,7.618 15.949,7.254 16.296,7.064C16.643,6.874 17.065,6.889 17.398,7.102C18.609,7.877 19.954,8.411 21.358,8.677L21.358,6.674C20.082,6.392 18.962,5.945 18.042,5.155C17.048,4.301 16.259,3.042 15.809,1.082Z"
+                            transform="translate(42.016 42.03) scale(.83207)"
+                        ></path>
+                    </g>
+                </svg>
+                TikTok
+            </a>
+        </li>
+        <!-- <li>
+            <a
+                data-icon="dribbble"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="https://dribbble.com/devenapuros"
+                target="_blank"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><circle cx="12" cy="12" r="10"></circle><path
+                        d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"
+                    ></path><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"
+                    ></path><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"
+                    ></path></svg
+                >
+                Dribbble
+            </a>
+        </li>
+        <li>
+            <a
+                data-icon="codepen"
+                class="menu-item flex items-center py-4 pl-20 md:pl-[calc((100vw-900px)/2)] text-[2rem] font-extrabold gap-8 text-light-gray-primary hover:text-light-texto-primary dark:text-dark-gray-primary hover:dark:text-dark-texto-primary md:hover:pl-[calc((100vw-900px)/2+2rem)] transition-all"
+                href="https://codepen.io/devenapuros"
+                target="_blank"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-codepen"
+                    ><polygon
+                        points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"
+                    ></polygon><line x1="12" x2="12" y1="22" y2="15.5"
+                    ></line><polyline points="22 8.5 12 15.5 2 8.5"
+                    ></polyline><polyline points="2 15.5 12 8.5 22 15.5"
+                    ></polyline><line x1="12" x2="12" y1="2" y2="8.5"
+                    ></line></svg
+                >
+                CodePen
+            </a>
+        </li> -->
+
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=skills]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="0.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path
+                fill-rule="evenodd"
+                d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"
+            />
+        </svg>
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=jobs]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path
+                d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg
+        >
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=projects]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path
+                d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"
+            ></path><path d="M17.64 15 22 10.64"></path><path
+                d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"
+            ></path></svg
+        >
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=education]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path
+                d="M6 12v5c3 3 9 3 12 0v-5"></path></svg
+        >
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=linkedin]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path><rect x="2" y="9" width="4" height="12"></rect><circle
+                cx="4"
+                cy="4"
+                r="2"></circle></svg
+        >
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=github]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+            ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
+        >
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=instagram]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path
+                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line
+                x1="17.5"
+                y1="6.5"
+                x2="17.51"
+                y2="6.5"></line>
+        </svg>
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=tiktok]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            fill-rule="evenodd"
+            stroke-linejoin="round"
+            stroke-miterlimit="2"
+            clip-rule="evenodd"
+            viewBox="0 0 24 24"
+            id="tiktok"
+        >
+            <g transform="translate(-40 -40)">
+                <rect
+                    width="24"
+                    height="24"
+                    x="40"
+                    y="40"
+                    fill="none"
+                ></rect>
+                <path
+                    fill="currentColor"
+                    d="M17.897,9.83L17.897,16.18C17.897,20.398 15.386,25.082 9.183,25.082C4.4,25.061 0.476,21.119 0.476,16.336C0.476,16.262 0.477,16.188 0.479,16.108C0.619,11.492 4.455,7.772 9.073,7.772C9.5,7.772 9.927,7.804 10.35,7.867C10.879,7.947 11.271,8.402 11.271,8.937L11.271,13.059C11.271,13.395 11.115,13.711 10.849,13.916C10.583,14.121 10.238,14.19 9.913,14.105C9.705,14.05 9.49,14.022 9.274,14.022C7.937,14.022 6.824,15.091 6.77,16.427L6.764,16.591C6.764,17.776 7.739,18.752 8.924,18.752L9.403,18.753C10.582,18.753 11.552,17.783 11.552,16.603L11.541,16.336L11.541,0C11.541,-0.597 12.026,-1.082 12.623,-1.082L16.7,-1.082C17.231,-1.082 17.684,-0.696 17.768,-0.172C18.061,1.652 18.617,2.797 19.451,3.513C20.292,4.235 21.38,4.513 22.611,4.71C23.136,4.794 23.522,5.247 23.522,5.778L23.522,9.913C23.522,10.215 23.395,10.504 23.173,10.708C22.951,10.913 22.653,11.016 22.352,10.991C20.806,10.864 19.299,10.47 17.897,9.83ZM15.809,1.082L13.705,1.082L13.705,16.298C13.712,16.399 13.716,16.501 13.716,16.603C13.716,18.969 11.769,20.916 9.403,20.916C9.32,20.916 9.237,20.914 9.154,20.908C9.078,20.913 9.001,20.915 8.924,20.915C6.552,20.915 4.601,18.963 4.601,16.591C4.601,16.499 4.604,16.406 4.608,16.339C4.707,13.907 6.692,11.948 9.107,11.862L9.107,9.936L9.073,9.935C5.617,9.935 2.746,12.72 2.641,16.169C2.64,16.224 2.639,16.28 2.639,16.336C2.639,19.936 5.593,22.903 9.188,22.918C13.864,22.918 15.733,19.362 15.733,16.18L15.733,8.013C15.733,7.618 15.949,7.254 16.296,7.064C16.643,6.874 17.065,6.889 17.398,7.102C18.609,7.877 19.954,8.411 21.358,8.677L21.358,6.674C20.082,6.392 18.962,5.945 18.042,5.155C17.048,4.301 16.259,3.042 15.809,1.082Z"
+                    transform="translate(42.016 42.03) scale(.83207)"
+                ></path>
+            </g>
+        </svg>
+        <!-- <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=dribbble]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><circle cx="12" cy="12" r="10"></circle><path
+                d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path><path
+                d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path><path
+                d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path></svg
+        >
+        <svg
+            class="text-[#bbb] dark:text-[#333] group-data-[icon=codepen]/icon:opacity-100 opacity-0 transition-opacity hidden md:block absolute -bottom-20 -right-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-codepen"
+            ><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"
+            ></polygon><line x1="12" x2="12" y1="22" y2="15.5"></line><polyline
+                points="22 8.5 12 15.5 2 8.5"></polyline><polyline
+                points="2 15.5 12 8.5 22 15.5"></polyline><line
+                x1="12"
+                x2="12"
+                y1="2"
+                y2="8.5"></line></svg
+        > -->
+    </ul>
+</div>
+<script>
+    const $menu = document.getElementById("topbar-menu");
+    const $menuBtn = document.getElementById("topbar-menu-button");
+    const $menuItems = document.querySelectorAll(".menu-item");
+    const $topbarMenuContainer = document.getElementById(
+        "topbar-menu-container"
+    );
+
+    $menuBtn.addEventListener("click", (event) => {
+        let isButtonActive = $menuBtn.getAttribute("data-active");
+        $menuBtn.setAttribute(
+            "data-active",
+            isButtonActive === "true" ? "false" : "true"
+        );
+
+        $menu.setAttribute(
+            "data-active",
+            isButtonActive === "true" ? "false" : "true"
+        );
+        document.body.style.overflow =
+            isButtonActive === "true" ? "auto" : "hidden";
+        if (isButtonActive) $menu.setAttribute("data-icon", "");
+    });
+
+    $menuItems.forEach((element) => {
+        element.addEventListener("click", () => {
+            $menuBtn.setAttribute("data-active", "false");
+            $menu.setAttribute("data-active", "false");
+            document.body.style.overflow = "auto";
+        });
+        element.addEventListener("mouseover", () => {
+            const icon = element.getAttribute("data-icon");
+            $menu.setAttribute("data-icon", icon);
+        });
+    });
+</script>

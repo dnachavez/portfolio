@@ -1,0 +1,53 @@
+---
+const { heroName, heroDescription, heroPicture } = Astro.props;
+---
+
+<style>
+    .hero-card {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .hero-image {
+        border-radius: 100%;
+    }
+
+    .hero-data {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .hero-name {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .hero-description {
+        font-size: 0.75rem;
+        color: var(--gray);
+    }
+
+    @media screen and (max-width: 600px) {
+        .hero-picture {
+            border: 3px solid var(--hover);
+        }
+    }
+</style>
+<article class="hero-card">
+    <img
+        class="hero-image"
+        src={`/heros/${heroPicture}`}
+        alt={heroName}
+        loading="lazy"
+        height="64px"
+        width="64px"
+    />
+
+    <div class="hero-data">
+        <h1 class="hero-name">{heroName}</h1>
+        <p class="hero-description">{heroDescription}</p>
+    </div>
+</article>

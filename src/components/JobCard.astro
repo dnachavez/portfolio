@@ -1,0 +1,146 @@
+---
+import AccordionButton from "./AccordionButton.astro";
+import TechItem from "./TechItem.astro";
+
+const {
+    id,
+    jobPicture,
+    jobTitle,
+    jobTime,
+    jobCompany,
+    jobCompanySite,
+    jobDescription,
+    jobActivities,
+    jobTechnologies,
+} = Astro.props;
+---
+
+<style>
+    @media screen and (min-width: 640px) {
+        .job-card:nth-child(2n) {
+            transform: translateX(100%);
+            padding-right: 0;
+        }
+
+        .job-card:nth-child(2n + 1) {
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+
+        .job-card:nth-child(2n + 1) .job-picture {
+            left: calc(100% + 2rem);
+        }
+
+        .job-card:nth-child(2n) .job-picture {
+            left: calc(-120px - 2rem);
+        }
+
+        .job-card:nth-child(2n + 1) .circle {
+            left: calc(100% - 10px);
+        }
+    }
+</style>
+<article
+    class="job-card group relative flex flex-col pl-6 gap-4 sm:w-[50%] sm:even:translate-x-full pr-0 sm:odd:pl-0 odd:pr-6"
+>
+    <span
+        class="circle gradient absolute top-0 left-[-10px] h-[24px] w-[24px] rounded-full z-[1]"
+    ></span>
+    <div
+        class="job-picture top-0 p-2 flex flex-col justify-center items-center gap-4 sm:absolute h-[120px] w-[120px] object-contain rounded-3xl bg-white"
+    >
+        <img
+            class="w-full h-auto"
+            src={`/jobs/${jobPicture}`}
+            alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
+            loading="lazy"
+        />
+    </div>
+    <div class="flex flex-col justify-center">
+        <div class="flex flex-col mb-4">
+            <h1
+                class="text-light-texto-primary dark:text-dark-texto-primary font-black text-xl"
+            >
+                {jobTitle}
+            </h1>
+            <a
+                href={jobCompanySite}
+                target="_blank"
+            >
+                <span
+                    class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
+                    style="display: inline-flex; align-items: center; gap: 4px;"
+                >
+                    {jobCompany}
+                    {jobCompanySite && (
+                        <svg
+                            class="inline text-light-gray-primary dark:text-dark-gray-primary"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="15 3 21 3 21 9" />
+                            <>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </>
+                        </svg>
+                    )}
+                </span>
+            </a>
+            <small
+                class="mt-1 text-light-gray-primary dark:text-dark-gray-primary italic text-[0.91rem]"
+            >
+                {jobTime}
+            </small>
+        </div>
+        <p
+            class="text-[1.1rem] sm:text-base text-light-texto-secondary dark:text-dark-texto-secondary"
+        >
+            {jobDescription}
+        </p>
+        <div
+            class="accordion flex flex-col max-h-0 overflow-hidden transition-all gap-6 duration-300"
+            id={`accordion-${id}`}
+        >
+            <div class="flex flex-col gap-2 mt-6">
+                <h2
+                    class="text-light-texto-primary dark:text-dark-texto-primary font-bold"
+                >
+                    Activities
+                </h2>
+                <ul
+                    class="ml-6 text-light-texto-secondary dark:text-dark-texto-secondary list-outside list-disc"
+                >
+                    {jobActivities.map((activity) => <li>{activity}</li>)}
+                </ul>
+            </div>
+            <div class="flex flex-col gap-2 mb-1">
+                <h2
+                    class="text-light-texto-primary dark:text-dark-texto-primary font-bold"
+                >
+                    Technologies
+                </h2>
+                <ul
+                    class="flex flex-wrap gap-x-4 gap-y-2 mb-0 text-light-texto-secondary dark:text-dark-texto-secondary"
+                >
+                    {
+                        jobTechnologies.map((technology) => (
+                            <TechItem
+                                name={technology.name}
+                                icon={technology.icon}
+                            />
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+        <AccordionButton dataTarget={id} />
+    </div>
+</article>

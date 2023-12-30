@@ -1,0 +1,103 @@
+---
+import Logo from "./logo.astro";
+const thumbnail = "/music/tugmangpreso.webp";
+const artist = "Loonie";
+const song = "Tugmang Preso";
+const link = "https://open.spotify.com/track/3iF6qURjmUsozda5wS6nkz";
+---
+
+<footer
+    class="flex flex-col border-t-[1px] border-[#0001] dark:border-[#ffffff15] py-10 gap-14"
+>
+    <section
+        class="flex flex-col sm:flex-row sm:items-center gap-8 sm:justify-between"
+    >
+        <div
+            class="flex gap-2 items-center font-bold text-light-texto-primary dark:text-dark-texto-primary"
+        >
+            <Logo />Dan Chavez
+        </div>
+        <ul class="flex flex-col sm:flex-row gap-3 sm:gap-8">
+            <li>
+                <a
+                    class="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
+                    href="#home">Start</a
+                >
+            </li>
+            <li>
+                <a
+                    class="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
+                    href="#skills">Skills</a
+                >
+            </li>
+            <li>
+                <a
+                    class="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
+                    href="#jobs">Experience</a
+                >
+            </li>
+            <li>
+                <a
+                    class="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
+                    href="#projects">Projects</a
+                >
+            </li>
+            <li>
+                <a
+                    class="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
+                    href="#education">Education</a
+                >
+            </li>
+            <li>
+                <a
+                    class="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
+                    href="/dan-chavez-full-stack-developer-resume.pdf"
+                    target="_blank">Resume</a
+                >
+            </li>
+        </ul>
+    </section>
+    <section
+        class="flex flex-col sm:flex-row sm:items-center gap-8 sm:justify-between"
+    >
+        <div class="flex flex-col gap-2">
+            <small
+                class="text-light-gray-primary dark:text-dark-gray-primary text-[0.75rem]"
+                >Weekly music discovery:</small
+            >
+            <a
+                class="flex items-center gap-3 p-1 hover:bg-[#0001] dark:hover:bg-[#fff1] rounded-2xl"
+                href={link}
+                target="_blank"
+            >
+                <img
+                    src={thumbnail}
+                    alt={`Song thumbnail of the song ${song} by ${artist}`}
+                    class="flex items-center justify-center text-[0.7rem] text-center h-20 w-20 sm:w-12 sm:h-12 bg-light-gray-secondary dark:bg-dark-gray-secondary rounded-xl"
+                    loading="lazy"
+                />
+                <div class="flex flex-col">
+                    <p
+                        class="text-light-texto-primary dark:text-dark-texto-primary font-extrabold -mb-1"
+                    >
+                        {song}
+                    </p>
+
+                    <span
+                        class="text-light-gray-primary dark:text-dark-gray-primary text-[0.81rem]"
+                        >{artist}</span
+                    >
+                </div>
+            </a>
+        </div>
+        <small
+            class="text-light-gray-primary dark:text-dark-gray-primary text-[0.75rem] max-w-md sm:text-end"
+            >This portfolio is open source. Feel free to use it, but
+            don't forget to leave a ⭐ on the repo. You can find the repository <a
+                class="text-light-texto-primary dark:text-dark-texto-primary hover:underline"
+                href="https://github.com/dnachavez/portfolio"
+                target="_blank">here</a
+            >.
+        </small>
+    </section>
+</footer>

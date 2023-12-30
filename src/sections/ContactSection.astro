@@ -1,0 +1,46 @@
+---
+import DribbbleCard from "../contactCards/DribbbleCard.astro";
+import EmailCard from "../contactCards/EmailCard.astro";
+import GithubCard from "../contactCards/GithubCard.astro";
+import InstagramCard from "../contactCards/InstagramCard.astro";
+import TikTokCard from "../contactCards/TikTokCard.astro";
+import LinkedinCard from "../contactCards/LinkedinCard.astro";
+import TwitterCard from "../contactCards/TwitterCard.astro";
+import YoutubeCard from "../contactCards/YoutubeCard.astro";
+---
+
+<style>
+    .contact-links {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    @media screen and (min-width: 640px) {
+        .contact-links {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .contact-links {
+            grid-template-columns: repeat(3, auto);
+            justify-content: space-between;
+        }
+    }
+</style>
+<section class="flex flex-col pt-16 pb-20 gap-16" id="contact">
+    <h1
+        class="font-black text-light-texto-primary dark:text-dark-texto-primary text-3xl sm:text-4xl"
+    >
+        Contact<span class="text-primary">.</span>
+    </h1>
+    <ul class="contact-links grid gap-x-8 gap-y-12">
+        <EmailCard />
+        <LinkedinCard />
+        <GithubCard />
+        <InstagramCard />
+        <TikTokCard />
+        <!-- <DribbbleCard />
+        <YoutubeCard />
+        <TwitterCard /> -->
+    </ul>
+</section>

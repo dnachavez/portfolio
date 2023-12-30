@@ -1,0 +1,48 @@
+---
+const { title } = Astro.props;
+import "../styles/globals.css";
+---
+
+<html lang="en" class="dark">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta
+            name="description"
+            content="Experienced full-stack developer with a focus on back-end development."
+        />
+        <meta name="author" content="dnachavez" />
+        <meta
+            name="keywords"
+            content="Dan Glyde Chavez,Dan Chavez,dnachavez,Full-stack Developer,full-stack,PHP,CodeIgniter"
+        />
+        <meta
+            property="og:title"
+            content="Dan Chavez - Full-stack Developer"
+        />
+        <meta property="og:url" content="https://dnachavez.ph/" />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta
+            property="og:description"
+            content="Experienced full-stack developer with a focus on back-end development."
+        />
+        <title>{title}</title>
+    </head>
+    <body class="bg-light-fondo-primary dark:bg-dark-fondo-primary">
+        <slot />
+        <script>
+            const darkThemeMq = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            );
+            if (darkThemeMq.matches) {
+                document.body.classList.add("dark");
+                document.documentElement.classList.add("dark");
+            } else {
+                document.body.classList.remove("dark");
+                document.documentElement.classList.remove("dark");
+            }
+        </script>
+    </body>
+</html>
