@@ -1,0 +1,105 @@
+---
+import AccordionButton from "./AccordionButton.astro";
+import TechItem from "./TechItem.astro";
+
+const {
+    id,
+    certificatePicture,
+    certificateTitle,
+    certificateTime,
+    certificateName,
+    certificateSite,
+    certificateDescription,
+} = Astro.props;
+---
+
+<style>
+    @media screen and (min-width: 640px) {
+        .certificate-card:nth-child(2n) {
+            transform: translateX(100%);
+            padding-right: 0;
+        }
+
+        .certificate-card:nth-child(2n + 1) {
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+
+        .certificate-card:nth-child(2n + 1) .certificate-picture {
+            left: calc(100% + 2rem);
+        }
+
+        .certificate-card:nth-child(2n) .certificate-picture {
+            left: calc(-320px - 2rem);
+        }
+
+        .certificate-card:nth-child(2n + 1) .circle {
+            left: calc(100% - 10px);
+        }
+    }
+
+    .info, .circle {
+        z-index: -1;
+    }
+
+    .certificate-picture {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .certificate-card:nth-child(2n + 1) .certificate-picture:hover img {
+        transform: scale(1.5) rotate(-5deg);
+        z-index: 1;
+    }
+
+    .certificate-card:nth-child(2n) .certificate-picture:hover img {
+        transform: scale(1.5) rotate(5deg);
+        z-index: 1;
+    }
+</style>
+<article
+    class="certificate-card group relative flex flex-col pl-6 gap-4 sm:w-[50%] sm:even:translate-x-full pr-0 sm:odd:pl-0 odd:pr-6"
+>
+    <span
+        class="circle gradient absolute top-0 left-[-10px] h-[24px] w-[24px] rounded-full z-[1]"
+    ></span>
+    <div
+        class="certificate-picture top-0 p-2 flex flex-col justify-center items-center gap-4 sm:absolute h-[220px] w-[320px] object-contain rounded-3xl"
+    >
+        <img
+            class="w-full h-auto"
+            src={`/certificates/${certificatePicture}`}
+            alt={`Certificate of ${certificateTitle} from ${certificateName}`}
+            loading="lazy"
+        />
+    </div>
+    <div class="info flex flex-col justify-center">
+        <div class="flex flex-col mb-4">
+            <h1
+                class="text-light-texto-primary dark:text-dark-texto-primary font-black text-xl"
+            >
+                {certificateTitle}
+            </h1>
+            <a
+                href={certificateSite}
+                target="_blank"
+            >
+                <span
+                    class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
+                    style="display: inline-flex; align-items: center; gap: 4px;"
+                >
+                    {certificateName}
+                </span>
+            </a>
+            <small
+                class="mt-1 text-light-gray-primary dark:text-dark-gray-primary italic text-[0.91rem]"
+            >
+                {certificateTime}
+            </small>
+        </div>
+        <p
+            class="text-[1.1rem] sm:text-base text-light-texto-secondary dark:text-dark-texto-secondary"
+        >
+            {certificateDescription}
+        </p>
+    </div>
+</article>
