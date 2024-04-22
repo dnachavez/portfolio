@@ -1,9 +1,35 @@
 [
     {
+        "id": "sentiai-sentiment-analysis",
+        "carouselImages": ["1.webp", "2.webp"],
+        "projectRepo": "https://github.com/dnachavez/fine-tuning-tinybert-for-sentiment-analysis",
+        "projectTitle": "SentiAI",
+        "projectSlogan": "TinyBERT for Sentiment Analysis",
+        "projectDescription": "A project developed as a final requirement for the completion of CS221, Algorithms and Complexity course subject, of second year BS Computer Science (BSCS) degree at the University of Southern Philippines Foundation (USPF). It is capable of analyzing and classifying the sentiment of text data into positive, negative, or neutral categories. The project includes scripts for training the model with a custom dataset, analyzing text inputs to determine sentiment, and utilities for preprocessing data and evaluating model performance, as well as a web application.",
+
+        "projectTechnologies": [
+            {
+                "name": "Python",
+                "icon": "python"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "HTML",
+                "icon": "html"
+            },
+            {
+                "name": "CSS",
+                "icon": "css"
+            }
+        ]
+    },
+    {
         "id": "iot-parking-system",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp"],
         "projectRepo": "https://github.com/dnachavez/iotparkingsystem",
-        "projectSite": "https://iotparkingsystem.dnachavez.ph",
         "projectTitle": "IoT Parking System",
         "projectSlogan": "Arduino Uno R4 WiFi Parking System",
         "projectDescription": "A project developed as a final requirement for the completion of the IT214, IS Innovation and New Technologies course subject, of second year BS Computer Science (BSCS) degree at the University of Southern Philippines Foundation (USPF). It aims to innovate the parking management of the university to solve the problem of managing parking spaces. The project's web interface is built with CodeIgniter 4 and uses Arduino Uno R4 WiFi hardware. The system delivers real-time information on available parking spaces and parking logs.",
