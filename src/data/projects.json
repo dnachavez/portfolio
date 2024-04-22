@@ -5,8 +5,8 @@
         "projectRepo": "https://github.com/dnachavez/iotparkingsystem",
         "projectSite": "https://iotparkingsystem.dnachavez.ph",
         "projectTitle": "IoT Parking System",
-        "projectSlogan": "IoT parking system using Arduino Uno R4 WiFi",
-        "projectDescription": "IoT Parking System is a project developed for the IT214—IS Innovations and New Technologies course subject, aimed at innovating parking management within university premises. The project is built on CodeIgniter 4 and Arduino Uno R4 WiFi, integrating IoT technology to tackle the challenge of efficiently managing parking spaces. By employing an array of sensors and Arduino Uno R4 WiFi, the system delivers real-time information on available parking spots, thereby streamlining the parking experience. This IoT parking system facilitates ease of parking for users and enables administrators to effectively monitor and optimize the utilization of parking areas.",
+        "projectSlogan": "Arduino Uno R4 WiFi Parking System",
+        "projectDescription": "A project developed as a final requirement for the completion of the IT214, IS Innovation and New Technologies course subject, of second year BS Computer Science (BSCS) degree at the University of Southern Philippines Foundation (USPF). It aims to innovate the parking management of the university to solve the problem of managing parking spaces. The project's web interface is built with CodeIgniter 4 and uses Arduino Uno R4 WiFi hardware. The system delivers real-time information on available parking spaces and parking logs.",
 
         "projectTechnologies": [
             {
@@ -44,8 +44,8 @@
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp"],
         "projectSite": "https://lms.lyonsglobal.us",
         "projectTitle": "Lyons Global LMS",
-        "projectSlogan": "Lyons Global's learning management system (LMS)",
-        "projectDescription": "This project is a complete redesign of the initial learning management system of Lyons Global™. This project was developed using WordPress as its core platform, incorporating enhanced functionalities to meet modern educational needs. It now supports various types of content delivery, including interactive modules, document-based resources, and video learning, to cater to different learning styles. Additionally, the system has been equipped with user registration and course access approvals, ensuring a controlled and structured learning environment. This redesign was focused on enhancing the user experience and expanding the capabilities of the learning management system.",
+        "projectSlogan": "Learning Management System",
+        "projectDescription": "The project is a complete redesign of Lyons Global™'s learning management system using WordPress. It supports various types of content delivery, including interactive modules, document-based resources, and video learning. A user registration and course access approval was added as well.",
 
         "projectTechnologies": [
             {
@@ -60,8 +60,8 @@
         "projectRepo": "https://github.com/dnachavez/philippine-scripts-translator",
         "projectSite": "https://philippine-scripts-translator.netlify.app",
         "projectTitle": "Philippine Scripts Translator",
-        "projectSlogan": "Translate modern Filipino texts into ancient Philippine scripts",
-        "projectDescription": "Philippine Scripts Translator is a tool to translate modern Filipino texts into ancient Philippine scripts that are included in the unicode charts. This project is inspired by jennayey's Philippine Script Translator and uses Next.js as its development framework.",
+        "projectSlogan": "Text to Ancient Philippine Scripts",
+        "projectDescription": "Philippine Scripts Translator is a tool to translate modern Filipino texts into ancient Philippine scripts that are included in the unicode charts. The project is inspired by jennayey's Philippine Script Translator and uses Next.js for its front-end framework.",
 
         "projectTechnologies": [
             {
@@ -81,7 +81,7 @@
         "projectSite": "https://gtranslation.netlify.app",
         "projectTitle": "Google Translation",
         "projectSlogan": "Translate with Google Translate",
-        "projectDescription": "Google Translation is a tool for translating between languages that Google Translate supports. This project uses Next.js for its development framework as well as the Google Translate API from Pawan.Krd.",
+        "projectDescription": "GTranslate is a translation tool that supports several languages from Google Translate. The project uses Next.js for its front-end framework and the Google Translate API from Pawan.Krd for its back-end.",
 
         "projectTechnologies": [
             {
@@ -97,10 +97,9 @@
     {
         "id": "uspf-buddy",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp"],
-        "projectSite": "https://buddy.dnachavez.ph/",
         "projectTitle": "USPF Buddy",
-        "projectSlogan": "Conversational interface assistant",
-        "projectDescription": "USPF Buddy is a project developed for the CC122—Intermediate Programming course subject. This project is built with PHP, JavaScript, HTML, and CSS to provide users with quick and easy access to extensive academic information through a conversational assistant. It understands and responds to a wide range of inquiries using OpenAI's GPT-3.5-turbo model, while also using DALL-E 2 for dynamic image generation.",
+        "projectSlogan": "Conversational Interface Assistant",
+        "projectDescription": "A project developed as a final requirement for the completion of the CC122, Intermediate Programming course subject, of first year BS Computer Science (BSCS) degree at the University of Southern Philippines Foundation (USPF). It understands and responds to a wide range of inquiries using OpenAI's GPT-3.5-turbo model, DALL-E image generation, and custom commands to provide users with quick and easy access to a university-curated knowledgebase.",
 
         "projectTechnologies": [
             {
@@ -139,8 +138,8 @@
         "projectRepo": "https://github.com/dnachavez/AuggieGPT",
         "projectSite": "https://auggiegpt.streamlit.app",
         "projectTitle": "AuggieGPT",
-        "projectSlogan": "ChatGPT-powered chatbot assistant for USPF",
-        "projectDescription": "AuggieGPT is a Streamlit application developed as a chatbot assistant for the University of Southern Philippines Foundation (USPF). This application is built using Python and OpenAI's GPT-3.5-turbo model. This chatbot is capable of understanding and responding to specific inquiries related to the university.",
+        "projectSlogan": "GPT-powered Chatbot Assistant",
+        "projectDescription": "A proposed Streamlit chatbot assistant for the University of Southern Philippines Foundation (USPF) built using Python and OpenAI's GPT-3.5-turbo model. It is capable of understanding and responding to specific queries related to the university.",
 
         "projectTechnologies": [
             {
