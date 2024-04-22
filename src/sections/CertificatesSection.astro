@@ -17,14 +17,3 @@ import certificates from "../data/certificates.json";
         </div>
     </div>
 </section>
-<script>
-    const $accordionButtons = document.querySelectorAll(".accordion-button");
-    $accordionButtons.forEach((btn) => {
-        btn.addEventListener("click", (event) => {
-            const accordionId = event.currentTarget.getAttribute("data-target");
-            const $accordion = document.getElementById(accordionId);
-            $accordion.classList.toggle("max-h-accordion-expanded");
-            event.currentTarget.classList.toggle("expanded");
-        });
-    });
-</script>
