@@ -1,20 +1,5 @@
 [
     {
-        "id": "lyons-global-lms",
-        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp"],
-        "projectSite": "https://lms.lyonsglobal.us",
-        "projectTitle": "Lyons Global LMS",
-        "projectSlogan": "Lyons Global's learning management system (LMS)",
-        "projectDescription": "This project is a complete redesign of the initial learning management system of Lyons Global™. This project was developed using WordPress as its core platform, incorporating enhanced functionalities to meet modern educational needs. It now supports various types of content delivery, including interactive modules, document-based resources, and video learning, to cater to different learning styles. Additionally, the system has been equipped with user registration and course access approvals, ensuring a controlled and structured learning environment. This redesign was focused on enhancing the user experience and expanding the capabilities of the learning management system.",
-
-        "projectTechnologies": [
-            {
-                "name": "WordPress",
-                "icon": "wordpress"
-            }
-        ]
-    },
-    {
         "id": "iot-parking-system",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp"],
         "projectRepo": "https://github.com/dnachavez/iotparkingsystem",
@@ -51,6 +36,21 @@
             {
                 "name": "Arduino",
                 "icon": "arduino"
+            }
+        ]
+    },
+    {
+        "id": "lyons-global-lms",
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp"],
+        "projectSite": "https://lms.lyonsglobal.us",
+        "projectTitle": "Lyons Global LMS",
+        "projectSlogan": "Lyons Global's learning management system (LMS)",
+        "projectDescription": "This project is a complete redesign of the initial learning management system of Lyons Global™. This project was developed using WordPress as its core platform, incorporating enhanced functionalities to meet modern educational needs. It now supports various types of content delivery, including interactive modules, document-based resources, and video learning, to cater to different learning styles. Additionally, the system has been equipped with user registration and course access approvals, ensuring a controlled and structured learning environment. This redesign was focused on enhancing the user experience and expanding the capabilities of the learning management system.",
+
+        "projectTechnologies": [
+            {
+                "name": "WordPress",
+                "icon": "wordpress"
             }
         ]
     },
