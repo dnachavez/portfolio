@@ -7,13 +7,13 @@
         "jobTime": "November 2023 - Present",
         "jobCompany": "Develop Kreativity",
         "jobCompanySite": "https://developkreativity.com",
-        "jobDescription": "I lead the development of diverse projects, dedicating myself to creating platforms that meet client needs and transform their concepts into tangible results.",
+        "jobDescription": "I lead the design and development of several projects, creating platforms that meet client needs and transforming their concepts into tangible results.",
         "jobActivities": [
-            "User interface design with HTML, CSS, and JavaScript.",
-            "Back-end infrastructure development with PHP.",
-            "API development and management with PHP.",
-            "RESTful API consumption with JavaScript.",
-            "Database design and implementation with MySQL."
+            "Design and development of user interfaces with HTML, CSS, and JavaScript.",
+            "Back-end and API development with PHP and CodeIgniter 4.",
+            "Full-stack development with WordPress.",
+            "Consumption of REST APIs with JavaScript.",
+            "Modeling and implementation of MySQL databases."
         ],
         "jobTechnologies": [
             {
@@ -45,6 +45,10 @@
                 "icon": "wordpress"
             },
             {
+                "name": "Figma",
+                "icon": "figma"
+            },
+            {
                 "name": "cPanel",
                 "icon": "cpanel"
             }
@@ -58,12 +62,12 @@
         "jobTime": "June 2023 - Present",
         "jobCompany": "University of Southern Philippines Foundation, Information and Communications Technology Department",
         "jobCompanySite": "http://uspf.edu.ph",
-        "jobDescription": "I collaborate on the development of various web systems for the university and its stakeholders, encompassing front-end, back-end, and API development to enhance user experience and system functionality.",
+        "jobDescription": "I collaborated in the development of several web system applications for the university and its stakeholders, including an AI/ML chatbot called \"AugiGPT\" and an all-in-one \"USPF Digital\" app, as well as enhancements to existing web system applications.",
         "jobActivities": [
-            "User interface design with HTML, CSS, and JavaScript.",
-            "Back-end system development with PHP and CodeIgniter 4.",
-            "RESTful API development with PHP and CodeIgniter 4.",
-            "Database design and implementation with MySQL."
+            "Design and development of user interfaces with HTML, CSS, and JavaScript.",
+            "Back-end and API development with PHP and CodeIgniter 4.",
+            "Consumption of REST APIs with JavaScript.",
+            "Modeling and implementation of MySQL databases."
         ],
         "jobTechnologies": [
             {
@@ -120,13 +124,12 @@
         "jobTime": "July 2021 - December 2021 (6 months)",
         "jobCompany": "MyToolz.net",
         "jobCompanySite": "https://mytoolz.net/tools",
-        "jobDescription": "I contributed to the development of various web tools for the website, focusing on enhancing the back-end and API infrastructure to improve service speed and user experience.",
+        "jobDescription": "I contributed to the design and development of several web tools, including account checkers and content generators, as well as the enhancement of back-end and API infrastructures, improving service speed and the user experience.",
         "jobActivities": [
-            "User interface design with HTML, CSS, and JavaScript.",
-            "Back-end system development with PHP.",
-            "API development and management with PHP.",
-            "RESTful API consumption with JavaScript.",
-            "Database design and implementation with MySQL."
+            "Design and development of user interfaces with HTML, CSS, and JavaScript.",
+            "Back-end and API development with PHP.",
+            "Consumption of REST APIs with JavaScript.",
+            "Modeling and implementation of MySQL databases."
         ],
         "jobTechnologies": [
             {
