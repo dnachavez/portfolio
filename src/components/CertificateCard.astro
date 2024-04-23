@@ -35,22 +35,10 @@ const {
         }
     }
 
-    .info, .circle {
-        z-index: -1;
-    }
-
-    .certificate-picture {
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .certificate-card:nth-child(2n + 1) .certificate-picture:hover img {
-        transform: scale(1.5) rotate(-5deg);
-        z-index: 1;
-    }
-
-    .certificate-card:nth-child(2n) .certificate-picture:hover img {
-        transform: scale(1.5) rotate(5deg);
-        z-index: 1;
+    @media screen and (max-width: 639px) {
+        .certificate-picture {
+            pointer-events: none;
+        }
     }
 </style>
 <article
@@ -100,3 +88,25 @@ const {
         </p>
     </div>
 </article>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const certificateCards = document.querySelectorAll('.certificate-card');
+
+    certificateCards.forEach((card, index) => {
+        const certificatePicture = card.querySelector('.certificate-picture');
+        const circle = card.querySelector('.circle');
+
+        certificatePicture.addEventListener('mouseenter', function() {
+            card.style.zIndex = '100';
+            this.style.transform = `rotate(${(index % 2 === 0) ? 5 : -5}deg) scale(1.5)`;
+            circle.style.zIndex = '-1';
+        });
+
+        certificatePicture.addEventListener('mouseleave', function() {
+            card.style.zIndex = '1';
+            this.style.transform = 'none';
+        });
+    });
+});
+
+</script>
