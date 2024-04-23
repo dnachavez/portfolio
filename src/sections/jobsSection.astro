@@ -16,6 +16,29 @@ import jobs from "../data/jobs.json";
         >
         </div>
     </div>
+    <div class="flex justify-center">
+        {jobs.length > 2 && (
+            <button
+                class="accordion-button group mt-6 w-fit justify-center py-3 px-5 pr-6 flex items-center gap-1 sm:gap-2 font-semibold text-base text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-3xl hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
+                id="toggleJobs"
+            >
+                <svg
+                    class="group-[.expanded]:rotate-180 transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><polyline points="6 9 12 15 18 9"></polyline></svg
+                >
+                <span class="flex">See more</span>
+            </button>
+        )}
+    </div>
 </section>
 <script>
     const $accordionButtons = document.querySelectorAll(".accordion-button");
@@ -26,5 +49,31 @@ import jobs from "../data/jobs.json";
             $accordion.classList.toggle("max-h-accordion-expanded");
             event.currentTarget.classList.toggle("expanded");
         });
+    });
+</script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const jobs = document.querySelectorAll('.job-card');
+        jobs.forEach((card, index) => {
+            if (index >= 2) {
+                card.style.display = 'none';
+            }
+        });
+    });
+
+    const button = document.getElementById('toggleJobs');
+    let showAllJobs = false;
+
+    button.addEventListener('click', () => {
+        const jobs = document.querySelectorAll('.job-card');
+        showAllJobs = !showAllJobs;
+
+        jobs.forEach((card, index) => {
+            if (index >= 2) {
+                card.style.display = showAllJobs ? '' : 'none';
+            }
+        });
+
+        button.innerHTML = showAllJobs ? '<svg class="rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See less' : '<svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See more';
     });
 </script>
