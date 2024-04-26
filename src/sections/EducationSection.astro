@@ -10,6 +10,55 @@ import educationDegrees from "../data/education.json";
         Education<span class="text-primary">.</span>
     </h1>
     <div class="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
-        {educationDegrees.map((education) => <EducationCard {...education} />)}
+        {educationDegrees.map((education, index) => <EducationCard {...education} id={`education-${index}`} style={`display: ${index < 4 ? '' : 'none'}`} />)}
+    </div>
+    <div class="flex justify-center">
+        {educationDegrees.length > 4 && (
+            <button
+                class="accordion-button group mt-6 w-fit justify-center py-3 px-5 pr-6 flex items-center gap-1 sm:gap-2 font-semibold text-base text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-3xl hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
+                id="toggleEducationDegrees"
+            >
+                <svg
+                    class="group-[.expanded]:rotate-180 transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><polyline points="6 9 12 15 18 9"></polyline></svg
+                >
+                <span class="flex">See more</span>
+            </button>
+        )}
     </div>
 </section>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const educationDegrees = document.querySelectorAll('.education-card');
+        educationDegrees.forEach((card, index) => {
+            if (index >= 4) {
+                card.style.display = 'none';
+            }
+        });
+    });
+
+    const button = document.getElementById('toggleEducationDegrees');
+    let showAllEducationDegrees = false;
+
+    button.addEventListener('click', () => {
+        const educationDegrees = document.querySelectorAll('.education-card');
+        showAllEducationDegrees = !showAllEducationDegrees;
+        
+        educationDegrees.forEach((card, index) => {
+            if (index >= 4) {
+                card.style.display = showAllEducationDegrees ? '' : 'none';
+            }
+        });
+
+        button.innerHTML = showAllEducationDegrees ? '<svg class="rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See less' : '<svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See more';
+    });
+</script>
