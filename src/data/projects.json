@@ -27,6 +27,21 @@
         ]
     },
     {
+        "id": "lyons-global",
+        "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp"],
+        "projectSite": "https://lyonsglobal.us/",
+        "projectTitle": "Lyons Global",
+        "projectSlogan": "Lyons Global™ Website",
+        "projectDescription": "Lyons Global is the official website of Lyons Global™. The website is built with WordPress and features a custom theme, custom post types, and custom fields. Our team at Develop Kreativity redesigned their website using WordPress, creating a modern and user-friendly interface that showcases their expertise and services as a digital health solutions company.",
+
+        "projectTechnologies": [
+            {
+                "name": "WordPress",
+                "icon": "wordpress"
+            }
+        ]
+    },
+    {
         "id": "iot-parking-system",
         "carouselImages": ["1.webp", "2.webp", "3.webp", "4.webp", "5.webp", "6.webp", "7.webp"],
         "projectRepo": "https://github.com/dnachavez/iotparkingsystem",
