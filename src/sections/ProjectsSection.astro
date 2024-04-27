@@ -23,7 +23,7 @@ import projects from "../data/projects.json";
         {projects.length > 4 && (
             <button
                 class="accordion-button group mt-6 w-fit justify-center py-3 px-5 pr-6 flex items-center gap-1 sm:gap-2 font-semibold text-base text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-3xl hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
-                id="toggleProjects"
+                id="toggle-projects"
             >
                 <svg
                     class="group-[.expanded]:rotate-180 transition-transform"
@@ -75,7 +75,7 @@ import projects from "../data/projects.json";
         });
     });
 
-    const button = document.getElementById('toggleProjects');
+    const button = document.getElementById('toggle-projects');
     let showAllProjects = false;
 
     button.addEventListener('click', () => {
