@@ -53,16 +53,18 @@ import certificates from "../data/certificates.json";
     const button = document.getElementById('toggle-certificates');
     let showAllCertificates = false;
 
-    button.addEventListener('click', () => {
-        const certificates = document.querySelectorAll('.certificate-card');
-        showAllCertificates = !showAllCertificates;
+    if (button) {
+        button.addEventListener('click', () => {
+            const certificates = document.querySelectorAll('.certificate-card');
+            showAllCertificates = !showAllCertificates;
 
-        certificates.forEach((card, index) => {
-            if (index >= 3) {
-                card.style.display = showAllCertificates ? '' : 'none';
-            }
+            certificates.forEach((card, index) => {
+                if (index >= 3) {
+                    card.style.display = showAllCertificates ? '' : 'none';
+                }
+            });
+
+            button.innerHTML = showAllCertificates ? '<svg class="rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See less' : '<svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See more';
         });
-
-        button.innerHTML = showAllCertificates ? '<svg class="rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See less' : '<svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See more';
-    });
+    }
 </script>

@@ -78,16 +78,18 @@ import projects from "../data/projects.json";
     const button = document.getElementById('toggle-projects');
     let showAllProjects = false;
 
-    button.addEventListener('click', () => {
-        const projects = document.querySelectorAll('.project-card');
-        showAllProjects = !showAllProjects;
+    if (button) {
+        button.addEventListener('click', () => {
+            const projects = document.querySelectorAll('.project-card');
+            showAllProjects = !showAllProjects;
 
-        projects.forEach((card, index) => {
-            if (index >= 4) {
-                card.style.display = showAllProjects ? '' : 'none';
-            }
+            projects.forEach((card, index) => {
+                if (index >= 4) {
+                    card.style.display = showAllProjects ? '' : 'none';
+                }
+            });
+
+            button.innerHTML = showAllProjects ? '<svg class="rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See less' : '<svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See more';
         });
-
-        button.innerHTML = showAllProjects ? '<svg class="rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See less' : '<svg class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg> See more';
-    });
+    }
 </script>
