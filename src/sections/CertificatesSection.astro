@@ -45,7 +45,7 @@ import certificates from "../data/certificates.json";
         const certificates = document.querySelectorAll('.certificate-card');
         certificates.forEach((card, index) => {
             if (index >= 3) {
-                card.style.display = 'none';
+                (card as HTMLElement).style.display = 'none';
             }
         });
     });
@@ -60,7 +60,7 @@ import certificates from "../data/certificates.json";
 
             certificates.forEach((card, index) => {
                 if (index >= 3) {
-                    card.style.display = showAllCertificates ? '' : 'none';
+                    (card as HTMLElement).style.display = showAllCertificates ? '' : 'none';
                 }
             });
 
