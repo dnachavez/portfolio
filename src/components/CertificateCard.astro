@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const circle = card.querySelector('.circle');
 
         certificatePicture.addEventListener('mouseenter', function() {
-            card.style.zIndex = '100';
+            (card as HTMLElement).style.zIndex = '100';
             this.style.transform = `rotate(${(index % 2 === 0) ? 5 : -5}deg) scale(1.5)`;
-            circle.style.zIndex = '-1';
+            (circle as HTMLElement).style.zIndex = '-1';
         });
 
         certificatePicture.addEventListener('mouseleave', function() {
-            card.style.zIndex = '1';
+            (card as HTMLElement).style.zIndex = '1';
             this.style.transform = 'none';
         });
     });
