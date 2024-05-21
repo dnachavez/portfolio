@@ -11,12 +11,12 @@ import "../styles/globals.css";
         <meta name="generator" content={Astro.generator} />
         <meta
             name="description"
-            content="Experienced full-stack developer with a focus on back-end development."
+            content="Dan Chavez is an experienced full-stack developer specializing in back-end development."
         />
-        <meta name="author" content="dnachavez" />
+        <meta name="author" content="Dan Chavez" />
         <meta
             name="keywords"
-            content="Dan Glyde Chavez,Dan Chavez,dnachavez,Full-stack Developer,full-stack,PHP,CodeIgniter"
+            content="Dan Glyde Chavez, Dan Chavez, dnachavez, Full-stack Developer, full-stack, PHP, CodeIgniter, web development, back-end development, front-end development"
         />
         <meta
             property="og:title"
@@ -26,9 +26,37 @@ import "../styles/globals.css";
         <meta property="og:image" content="/ogimage.png" />
         <meta
             property="og:description"
-            content="Experienced full-stack developer with a focus on back-end development."
+            content="Dan Chavez is an experienced full-stack developer specializing in back-end development."
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dan Chavez - Full-stack Developer" />
+        <meta property="og:locale" content="en_US" />
+        <link rel="canonical" href="https://dnachavez.dev/" />
         <title>{title}</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Dan Glyde Chavez",
+                "url": "https://dnachavez.dev",
+                "sameAs": [
+                    "https://www.linkedin.com/in/danachavez",
+                    "https://github.com/dnachavez",
+                    "https://www.instagram.com/dnachavez",
+                    "https://www.tiktok.com/@dnachavez",
+                    "https://x.com/dnachavez_dev"
+                ],
+                "jobTitle": "Full-stack Developer",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Develop Kreativity"
+                },
+                "alumniOf": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Southern Philippines Foundation"
+                }
+            }
+            </script>
     </head>
     <body class="bg-light-fondo-primary dark:bg-dark-fondo-primary">
         <slot />
