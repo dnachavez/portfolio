@@ -44,10 +44,10 @@ import jobs from "../data/jobs.json";
     const $accordionButtons = document.querySelectorAll(".accordion-button");
     $accordionButtons.forEach((btn) => {
         btn.addEventListener("click", (event) => {
-            const accordionId = event.currentTarget.getAttribute("data-target");
+            const accordionId = (event.currentTarget as HTMLElement).getAttribute("data-target");
             const $accordion = document.getElementById(accordionId);
             $accordion.classList.toggle("max-h-accordion-expanded");
-            event.currentTarget.classList.toggle("expanded");
+            (event.currentTarget as HTMLElement).classList.toggle("expanded");
         });
     });
 </script>
@@ -56,7 +56,7 @@ import jobs from "../data/jobs.json";
         const jobs = document.querySelectorAll('.job-card');
         jobs.forEach((card, index) => {
             if (index >= 2) {
-                card.style.display = 'none';
+                (card as HTMLElement).style.display = 'none';
             }
         });
     });
@@ -71,7 +71,7 @@ import jobs from "../data/jobs.json";
 
             jobs.forEach((card, index) => {
                 if (index >= 2) {
-                    card.style.display = showAllJobs ? '' : 'none';
+                    (card as HTMLElement).style.display = showAllJobs ? '' : 'none';
                 }
             });
 
