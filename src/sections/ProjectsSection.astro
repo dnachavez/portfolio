@@ -49,7 +49,7 @@ import projects from "../data/projects.json";
     const $closeModalButtons = document.querySelectorAll(".close-modal-btn");
     $openModalButtons.forEach((btn) => {
         btn.addEventListener("click", (event) => {
-            const modalId = event.currentTarget.getAttribute("data-target");
+            const modalId = (event.currentTarget as HTMLElement).getAttribute("data-target");
             const $modal = document.getElementById(modalId);
             $modal.setAttribute("data-visible", "true");
             document.body.style.overflow = "hidden";
@@ -58,7 +58,7 @@ import projects from "../data/projects.json";
 
     $closeModalButtons.forEach((btn) => {
         btn.addEventListener("click", (event) => {
-            const modalId = event.currentTarget.getAttribute("data-target");
+            const modalId = (event.currentTarget as HTMLElement).getAttribute("data-target");
             const $modal = document.getElementById(modalId);
             $modal.setAttribute("data-visible", "false");
             document.body.style.overflow = "auto";
@@ -70,7 +70,7 @@ import projects from "../data/projects.json";
         const projects = document.querySelectorAll('.project-card');
         projects.forEach((card, index) => {
             if (index >= 4) {
-                card.style.display = 'none';
+                (card as HTMLElement).style.display = 'none';
             }
         });
     });
@@ -85,7 +85,7 @@ import projects from "../data/projects.json";
 
             projects.forEach((card, index) => {
                 if (index >= 4) {
-                    card.style.display = showAllProjects ? '' : 'none';
+                    (card as HTMLElement).style.display = showAllProjects ? '' : 'none';
                 }
             });
 
