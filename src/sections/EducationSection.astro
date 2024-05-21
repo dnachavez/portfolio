@@ -41,7 +41,7 @@ import educationDegrees from "../data/education.json";
         const educationDegrees = document.querySelectorAll('.education-card');
         educationDegrees.forEach((card, index) => {
             if (index >= 4) {
-                card.style.display = 'none';
+                (card as HTMLElement).style.display = 'none';
             }
         });
     });
@@ -56,7 +56,7 @@ import educationDegrees from "../data/education.json";
             
             educationDegrees.forEach((card, index) => {
                 if (index >= 4) {
-                    card.style.display = showAllEducationDegrees ? '' : 'none';
+                    (card as HTMLElement).style.display = showAllEducationDegrees ? '' : 'none';
                 }
             });
 
