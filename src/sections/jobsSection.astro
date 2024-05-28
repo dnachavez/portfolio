@@ -46,7 +46,9 @@ import jobs from "../data/jobs.json";
         btn.addEventListener("click", (event) => {
             const accordionId = (event.currentTarget as HTMLElement).getAttribute("data-target");
             const $accordion = document.getElementById(accordionId);
-            $accordion.classList.toggle("max-h-accordion-expanded");
+            if ($accordion) {
+                $accordion.classList.toggle("max-h-accordion-expanded");
+            }
             (event.currentTarget as HTMLElement).classList.toggle("expanded");
         });
     });
