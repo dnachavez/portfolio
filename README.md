@@ -8,9 +8,11 @@
 <p align="center">
     My personal portfolio built with Astro.
     <br />
-    Cloned from devenapuros's <a href="https://github.com/devenapuros/portfolio">portfolio</a> project.
+    Cloned from dnachavez's <a href="https://github.com/dnachavez/portfolio">portfolio</a> project.
     <br />
-    <a href="https://dnachavez.ph">Go to website</a>&nbsp;
+    Based on devenapuros's <a href="https://github.com/devenapuros/portfolio">portfolio</a> project.
+    <br />
+    <a href="https://dnachavez.dev">Go to website</a>&nbsp;
     ·
     &nbsp;<a href="https://github.com/dnachavez/portfolio/issues">Report Bug</a>
   </p>
