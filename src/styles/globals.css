@@ -92,3 +92,7 @@ body.dark {
 .carousel-viewport::-webkit-scrollbar {
     display: none;
 }
+
+img, svg {
+    pointer-events: none;
+}
