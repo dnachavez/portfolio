@@ -128,7 +128,7 @@ import "../styles/skills-section.css";
             <ul class="skills-list hard">
                 {
                     skills.map((skill) => (
-                        <li>
+                        <li class="tech-item">
                             <img
                                 src={`/icons/${skill.skillPicture}`}
                                 alt=""
@@ -136,7 +136,7 @@ import "../styles/skills-section.css";
                                 width="45%"
                                 loading="lazy"
                             />
-                            {skill.skillName}
+                            <span class="skill-name">{skill.skillName}</span>
                         </li>
                     ))
                 }
