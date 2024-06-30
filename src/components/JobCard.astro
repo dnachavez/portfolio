@@ -86,17 +86,19 @@ function calculateDuration(jobTime) {
             >
                 {jobTitle}
             </h1>
-            <a
-                href={jobCompanySite}
-                target="_blank"
-            >
-                <span
-                    class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
-                    style="display: inline-flex; align-items: center; gap: 4px;"
+            {jobCompanySite && (
+                <a
+                    href={jobCompanySite}
+                    target="_blank"
                 >
-                    {jobCompany}
-                </span>
-            </a>
+                    <span
+                        class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
+                        style="display: inline-flex; align-items: center; gap: 4px;"
+                    >
+                        {jobCompany}
+                    </span>
+                </a>
+            )}
             <small
                 class="mt-1 text-light-gray-primary dark:text-dark-gray-primary italic text-[0.91rem]"
             >
