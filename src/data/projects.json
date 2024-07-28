@@ -1,5 +1,52 @@
 [
     {
+        "id": "bilis-delivery",
+        "carouselImages": ["1.webp", "2.webp"],
+        "projectSite": "https://app.bilisdelivery.com/",
+        "projectTitle": "Bilis Delivery",
+        "projectSlogan": "Deliver Items at Your Doorstep",
+        "projectDescription": "Bilis Delivery is a logistics service that focuses on fast and efficient delivery of various items to your doorstep. This project is built with Laravel and Flutter, providing a web and android application for the logistics team, restaurant management, and for the customers. The system includes features such as real-time tracking, order management, and delivery status updates.",
+
+        "projectTechnologies": [
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "HTML",
+                "icon": "html"
+            },
+            {
+                "name": "CSS",
+                "icon": "css"
+            },
+            {
+                "name": "MySQL",
+                "icon": "mysql"
+            },
+            {
+                "name": "Flutter",
+                "icon": "flutter"
+            },
+            {
+                "name": "Dart",
+                "icon": "dart"
+            },
+            {
+                "name": "Firebase",
+                "icon": "firebase"
+            },
+            {
+                "name": "Laravel",
+                "icon": "laravel"
+            },
+            {
+                "name": "cPanel",
+                "icon": "cpanel"
+            }
+        ]
+    },
+    {
         "id": "sentiai-sentiment-analysis",
         "carouselImages": ["1.webp", "2.webp"],
         "projectRepo": "https://github.com/dnachavez/fine-tuning-tinybert-for-sentiment-analysis",
