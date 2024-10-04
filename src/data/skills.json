@@ -8,8 +8,20 @@
         "skillPicture": "codeigniter.svg"
     },
     {
+        "skillName": "Python",
+        "skillPicture": "python.svg"
+    },
+    {
         "skillName": "JavaScript",
         "skillPicture": "javascript.svg"
+    },
+    {
+        "skillName": "AWS",
+        "skillPicture": "aws.svg"
+    },
+    {
+        "skillName": "Serverless",
+        "skillPicture": "serverless.svg"
     },
     {
         "skillName": "HTML",

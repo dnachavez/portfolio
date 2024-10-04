@@ -1,5 +1,72 @@
 [
     {
+        "id": "xFusion",
+        "jobPicture": "xfusion.webp",
+        "jobColor": "#10214c",
+        "jobTitle": "Full-Stack Developer",
+        "jobTime": "August 2024 - Present",
+        "jobCompany": "xFusion",
+        "jobCompanySite": "https://xfusion.io/",
+        "jobDescription": "I collaborate on the development of AI/ML agents for a leading client using Serverless architecture, AWS, JavaScript, Python, and Node.js. I'm actively involved in creating scalable solutions that leverage cutting-edge technologies in the AI and machine learning domain.",
+        "jobActivities": [
+            "Developing and deploying AI/ML agents using serverless architecture on AWS",
+            "Implementing machine learning models with Python and integrating them into production systems",
+            "Building scalable and efficient backend services using Node.js and AWS Lambda",
+            "Designing and implementing RESTful APIs for AI/ML model interaction",
+            "Optimizing AI/ML pipelines for improved performance and cost-effectiveness",
+            "Collaborating with data scientists to productionize ML models",
+            "Implementing data processing and ETL workflows using AWS services",
+            "Ensuring code quality through rigorous testing and code reviews",
+            "Continuously monitoring and improving AI/ML agent performance"
+        ],
+        "jobTechnologies": [
+            {
+                "name": "Python",
+                "icon": "python"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "Node.js",
+                "icon": "node"
+            },
+            {
+                "name": "AWS",
+                "icon": "aws"
+            },
+            {
+                "name": "Serverless",
+                "icon": "serverless"
+            },
+            {
+                "name": "Machine Learning",
+                "icon": "tensorflow"
+            },
+            {
+                "name": "Lambda",
+                "icon": "awslambda"
+            },
+            {
+                "name": "CloudWatch",
+                "icon": "awscloudwatch"
+            },
+            {
+                "name": "DynamoDB",
+                "icon": "awsdynamodb"
+            },
+            {
+                "name": "Simple Notification Service",
+                "icon": "awssns"
+            },
+            {
+                "name": "Simple Queue Service",
+                "icon": "awsqueue"
+            }
+        ]
+    },
+    {
         "id": "develop-kreativity",
         "jobPicture": "developkreativity.webp",
         "jobColor": "#006fff",
@@ -7,7 +74,7 @@
         "jobTime": "November 2023 - Present",
         "jobCompany": "Develop Kreativity",
         "jobCompanySite": "https://developkreativity.com/",
-        "jobDescription": "I lead the design and development of several projects, creating platforms that meet client needs and transforming their concepts into tangible results.",
+        "jobDescription": "I lead the design and development of several projects, creating solutions that meet client needs and transforming their concepts into a reality.",
         "jobActivities": [
             "Design and development of user interfaces with HTML, CSS, and JavaScript.",
             "Back-end and API development with PHP and CodeIgniter 4.",
@@ -62,7 +129,7 @@
         "jobTime": "June 2023 - Present",
         "jobCompany": "Information and Communications Technology Department at University of Southern Philippines Foundation",
         "jobCompanySite": "https://uspf.edu.ph/",
-        "jobDescription": "I collaborate in the development of several web system applications for the university and its stakeholders, including an AI/ML chatbot called Augi and the USPF Digital app, as well as enhancements to existing web system applications.",
+        "jobDescription": "I collaborate in the development of system applications for the university and its stakeholders, including an AI/ML chatbot Augi and the USPF Digital app, as well as enhancements to existing system applications.",
         "jobActivities": [
             "Design and development of user interfaces with HTML, CSS, and JavaScript.",
             "Back-end and API development with PHP and CodeIgniter 4.",

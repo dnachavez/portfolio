@@ -96,3 +96,11 @@ body.dark {
 img, svg {
     pointer-events: none;
 }
+
+.accordion {
+    transition: max-height 0.5s ease-in-out;
+}
+
+.max-h-accordion-expanded {
+    max-height: 2000px;
+}
