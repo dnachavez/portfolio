@@ -16,14 +16,6 @@
         "skillPicture": "javascript.svg"
     },
     {
-        "skillName": "AWS",
-        "skillPicture": "aws.svg"
-    },
-    {
-        "skillName": "Serverless",
-        "skillPicture": "serverless.svg"
-    },
-    {
         "skillName": "HTML",
         "skillPicture": "html.svg"
     },
@@ -75,6 +67,10 @@
     {
         "skillName": "GCP",
         "skillPicture": "gcp.svg"
+    },
+    {
+        "skillName": "Serverless",
+        "skillPicture": "serverless.svg"
     },
     {
         "skillName": "Figma",
