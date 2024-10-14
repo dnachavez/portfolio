@@ -28,10 +28,14 @@ jobs:
       run: ls -la
     
     - name: 📂 Deploy to FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: sand4rt/ftp-deployer@v1.8
       with:
-        server: ${{ secrets.FTP_SERVER }}
+        sftp: false
+        host: ${{ secrets.FTP_SERVER }}
+        port: 21
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
-        server-dir: ${{ secrets.FTP_DIR }}
+        remote_folder: ${{ secrets.FTP_DIR }}
+        local_folder: ./dist
+        cleanup: false
+        passive: true
