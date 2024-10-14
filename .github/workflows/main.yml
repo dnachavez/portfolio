@@ -30,12 +30,12 @@ jobs:
     - name: 📂 Deploy to FTP
       uses: sand4rt/ftp-deployer@v1.8
       with:
-        sftp: false
+        sftp: ${{ secrets.SFTP }}
         host: ${{ secrets.FTP_SERVER }}
-        port: 21
+        port: ${{ secrets.FTP_PORT }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         remote_folder: ${{ secrets.FTP_DIR }}
-        local_folder: ./dist
-        cleanup: false
-        passive: true
+        local_folder: ${{ secrets.LOCAL_FOLDER }}
+        cleanup: ${{ secrets.CLEANUP }}
+        passive: ${{ secrets.PASSIVE }}
