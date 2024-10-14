@@ -22,6 +22,8 @@ jobs:
       run: npm install
     
     - name: 🔨 Build project
+      env:
+        PUBLIC_GITHUB_TOKEN: ${{ secrets.PUBLIC_GITHUB_TOKEN }}
       run: npm run build
     
     - name: 📂 Deploy to FTP

@@ -77,6 +77,10 @@
         "skillPicture": "figma.svg"
     },
     {
+        "skillName": "LangChain",
+        "skillPicture": "langchain.svg"
+    },
+    {
         "skillName": "Adobe Photoshop",
         "skillPicture": "photoshop.svg"
     },
