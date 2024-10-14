@@ -22,9 +22,10 @@ jobs:
       run: npm install
     
     - name: 🔨 Build project
-      env:
-        PUBLIC_GITHUB_TOKEN: ${{ secrets.PUBLIC_GITHUB_TOKEN }}
       run: npm run build
+
+    - name: 📂 List directory contents
+      run: ls -la
     
     - name: 📂 Deploy to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -33,4 +34,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: /home/dnacakvn/public_html/
+        server-dir: ${{ secrets.FTP_DIR }}
