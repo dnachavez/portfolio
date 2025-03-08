@@ -48,14 +48,19 @@ const {
         class="circle gradient absolute top-0 left-[-10px] h-[24px] w-[24px] rounded-full z-[1]"
     ></span>
     <div
-        class="certificate-picture top-0 p-2 flex flex-col justify-center items-center gap-4 sm:absolute h-[220px] w-[320px] object-contain rounded-3xl"
+        class="certificate-picture top-0 p-2 flex flex-col justify-center items-center gap-4 sm:absolute h-[220px] w-[320px] object-contain rounded-3xl cursor-pointer relative"
     >
-        <img
-            class="w-full h-auto rounded-3xl"
-            src={`/certificates/${certificatePicture}`}
-            alt={`Certificate of ${certificateTitle} from ${certificateName}`}
-            loading="lazy"
-        />
+        <a href={certificateSite ? certificateSite : `/certificates/${certificatePicture}`} target="_blank" rel="noopener noreferrer">
+            <img
+                class="w-full h-auto rounded-3xl"
+                src={`/certificates/${certificatePicture}`}
+                alt={`Certificate of ${certificateTitle} from ${certificateName}`}
+                loading="lazy"
+            />
+        </a>
+        <div class="tooltip hidden absolute bg-black/80 text-white px-3 py-1 rounded-md text-sm pointer-events-none">
+            View certificate
+        </div>
     </div>
     <div class="info flex flex-col justify-center">
         <div class="flex flex-col mb-4">
@@ -65,14 +70,22 @@ const {
                 {certificateTitle}
             </h1>
             <a
-                href={certificateSite}
-                target="_blank"
+                href={certificateSite || "#"}
+                target={certificateSite ? "_blank" : "_self"}
+                class={certificateSite ? "hover:underline" : "pointer-events-none"}
             >
                 <span
                     class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
                     style="display: inline-flex; align-items: center; gap: 4px;"
                 >
                     {certificateName}
+                    {certificateSite && (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    )}
                 </span>
             </a>
             <small
@@ -92,19 +105,22 @@ const {
 document.addEventListener('DOMContentLoaded', function() {
     const certificateCards = document.querySelectorAll('.certificate-card');
 
-    certificateCards.forEach((card, index) => {
+    certificateCards.forEach((card) => {
         const certificatePicture = card.querySelector('.certificate-picture');
-        const circle = card.querySelector('.circle');
+        const tooltip = certificatePicture.querySelector('.tooltip');
 
-        certificatePicture.addEventListener('mouseenter', function() {
-            (card as HTMLElement).style.zIndex = '100';
-            this.style.transform = `rotate(${(index % 2 === 0) ? 5 : -5}deg) scale(1.5)`;
-            (circle as HTMLElement).style.zIndex = '-1';
+        certificatePicture.addEventListener('mousemove', function(e) {
+            const rect = certificatePicture.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            tooltip.style.display = 'block';
+            tooltip.style.left = `${x + 10}px`;
+            tooltip.style.top = `${y + 10}px`;
         });
 
         certificatePicture.addEventListener('mouseleave', function() {
-            (card as HTMLElement).style.zIndex = '1';
-            this.style.transform = 'none';
+            tooltip.style.display = 'none';
         });
     });
 });

@@ -4,19 +4,19 @@
         "jobPicture": "xfusion.webp",
         "jobColor": "#10214c",
         "jobTitle": "Full Stack Developer",
-        "jobTime": "August 2024 - Present",
+        "jobTime": "August 2024 - February 2025",
         "jobCompany": "xFusion",
         "jobCompanySite": "https://xfusion.io/",
-        "jobDescription": "I collaborate on the development of AI/ML agents for a leading client using Serverless architecture, AWS, JavaScript, Python, and Node.js. I'm actively involved in creating scalable solutions that leverage cutting-edge technologies in the AI and machine learning domain.",
+        "jobDescription": "Collaborates on the development of AI agents for a leading client, including:",
         "jobActivities": [
-            "Developing and deploying AI/ML agents using Serverless architecture on AWS",
-            "Building AI/ML workflows with Python and integrating them into production systems",
-            "Building scalable and efficient backend services using Node.js and AWS Lambda",
-            "Designing and implementing RESTful APIs for AI/ML model interaction",
-            "Optimizing AI/ML pipelines for improved performance and cost-effectiveness",
-            "Implementing data processing and ETL workflows using AWS services",
-            "Ensuring code quality through rigorous testing and code reviews",
-            "Continuously monitoring and improving AI/ML agent performance"
+            "Developed an intelligent inbox with Gmail and Slack integration that filters important emails while excluding spam, promotions, social updates, and other non-essential messages. The system includes an AI-powered responder that drafts contextual replies to incoming communications.",
+            "Enhanced the performance of an AI task management agent that processes customer support communications from Gmail, Slack, and Fireflies, utilizing Python, OpenAI, LangChain, LangGraph, LangSmith, Pydantic, and Node.js and TypeScript with Linear API integration.",
+            "Optimized an AI email responder agent for Gmail, improving response accuracy and efficiency using Python, OpenAI, LangChain, LangGraph, LangSmith, Pydantic, and Node.js and TypeScript.",
+            "Developed a customer onboarding workflow to track activity and proactively contact customers about their progress via their CSM’s email through Gmail, using Node.js and TypeScript.",
+            "Developed and deployed AI agents using Serverless architecture on AWS, integrating scalable backend services with Node.js, TypeScript, Python, and AWS Lambda.",
+            "Built and optimized AI workflows using Python, Node.js, and TypeScript, integrating RESTful APIs for production-level model interaction.",
+            "Designed and implemented ETL workflows and data pipelines using AWS services to improve performance and cost efficiency.",
+            "Enhanced AI agent performance through continuous monitoring, testing, and code reviews to ensure reliability and scalability."
         ],
         "jobTechnologies": [
             {
@@ -55,11 +55,10 @@
         "jobCompanySite": "https://developkreativity.com/",
         "jobDescription": "I lead the design and development of several projects, creating solutions that meet client needs and transforming their concepts into a reality.",
         "jobActivities": [
-            "Design and development of user interfaces with HTML, CSS, and JavaScript.",
-            "Back-end and API development with PHP and CodeIgniter 4.",
-            "Full-stack development with WordPress.",
-            "Consumption of REST APIs with JavaScript.",
-            "Modeling and implementation of MySQL databases."
+            "Redesigned Lyons Global™'s Learning Management System (LMS) using WordPress, integrating interactive modules, document-based resources, video learning, and a user registration with course access approval system.",
+            "Developed the Lyons Global™ official website using WordPress, implementing a custom theme, post types, and fields to create a modern, user-friendly interface that highlights the company's expertise in digital health solutions.",
+            "Developed Bilis Delivery using Laravel and Flutter, a cross-platform food delivery app with real-time tracking, order management, and delivery status updates for delivery riders, restaurants, and customers.",
+            "Developed Worksuite a web-based system for the management of the company's operations, including customer management and sales tracking using CodeIgniter 4."
         ],
         "jobTechnologies": [
             {
@@ -110,10 +109,10 @@
         "jobCompanySite": "https://uspf.edu.ph/",
         "jobDescription": "I collaborate in the development of system applications for the university and its stakeholders, including an AI/ML chatbot Augi and the USPF Digital app, as well as enhancements to existing system applications.",
         "jobActivities": [
-            "Design and development of user interfaces with HTML, CSS, and JavaScript.",
-            "Back-end and API development with PHP and CodeIgniter 4.",
-            "Consumption of REST APIs with JavaScript.",
-            "Modeling and implementation of MySQL databases."
+            "Developed an all-in-one platform for faculty, students, and guests using CodeIgniter 4 with features for balance tracking, RFID monitoring, digital ID, chats, and course offerings.",
+            "Developed a queuing management system using Laravel and Vue.js for cashier, registrar, and other offices offering services with kiosk integration and virtual 3D campus tour.",
+            "Built an AI Agent for a ChatSDK that can determine the intent, sentiment, and be able to respond to queries and assess the relevancy of the answers and do a QA, using Python, OpenAI, and RAG with a GitHub repository knowledge base.",
+            "Configured a PowerEdge R440 server running Kali Linux and Ubuntu to host a Laravel-based document records management system."
         ],
         "jobTechnologies": [
             {
@@ -172,10 +171,13 @@
         "jobCompanySite": "https://mytoolz.net/tools/",
         "jobDescription": "I contributed to the design and development of several web tools, including account checkers and content generators, as well as the enhancement of back-end and API infrastructures, improving service speed and the user experience.",
         "jobActivities": [
-            "Design and development of user interfaces with HTML, CSS, and JavaScript.",
-            "Back-end and API development with PHP.",
-            "Consumption of REST APIs with JavaScript.",
-            "Modeling and implementation of MySQL databases."
+            "Refactored a Blogger website theme implementing a client-side JavaScript function to prevent bypass of links from a built-in link generator.",
+            "Developed a tool to extract IP Vanish proxy data and validate Stripe API keys.",
+            "Developed tools to verify proxy servers, check credit card validity, and verify Pureflix accounts.",
+            "Developed tools to bypass ad link generators such as adf.ly and Linkvertise.",
+            "Developed an email tool to filter by provider and generate emails using the dot trick.",
+            "Developed a tool to check Bitcoin wallet balances.",
+            "Developed key generators for Malwarebytes, Discord Nitro, HMA VPN, and Express VPN."
         ],
         "jobTechnologies": [
             {

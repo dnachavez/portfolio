@@ -16,6 +16,10 @@
         "skillPicture": "javascript.svg"
     },
     {
+        "skillName": "TypeScript",
+        "skillPicture": "typescript.svg"
+    },
+    {
         "skillName": "HTML",
         "skillPicture": "html.svg"
     },
