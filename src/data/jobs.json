@@ -3,7 +3,7 @@
         "id": "xFusion",
         "jobPicture": "xfusion.webp",
         "jobColor": "#10214c",
-        "jobTitle": "Full Stack Developer",
+        "jobTitle": "Full Stack AI Engineer",
         "jobTime": "August 2024 - February 2025",
         "jobCompany": "xFusion",
         "jobCompanySite": "https://xfusion.io/",
@@ -103,16 +103,16 @@
         "id": "university-of-southern-philippines-foundation",
         "jobPicture": "uspf.webp",
         "jobColor": "#27235e",
-        "jobTitle": "Full Stack Developer (Working Scholar)",
+        "jobTitle": "Full Stack Developer",
         "jobTime": "June 2023 - Present",
         "jobCompany": "Information and Communications Technology Department at University of Southern Philippines Foundation",
         "jobCompanySite": "https://uspf.edu.ph/",
         "jobDescription": "I collaborate in the development of system applications for the university and its stakeholders, including an AI/ML chatbot Augi and the USPF Digital app, as well as enhancements to existing system applications.",
         "jobActivities": [
-            "Developed an all-in-one platform for faculty, students, and guests using CodeIgniter 4 with features for balance tracking, RFID monitoring, digital ID, chats, and course offerings.",
-            "Developed a queuing management system using Laravel and Vue.js for cashier, registrar, and other offices offering services with kiosk integration and virtual 3D campus tour.",
-            "Built an AI Agent for a ChatSDK that can determine the intent, sentiment, and be able to respond to queries and assess the relevancy of the answers and do a QA, using Python, OpenAI, and RAG with a GitHub repository knowledge base.",
-            "Configured a PowerEdge R440 server running Kali Linux and Ubuntu to host a Laravel-based document records management system."
+            "Developed an all-in-one platform for faculty, students, and guests using CodeIgniter 4 with balance tracking, RFID monitoring, digital ID, chats, and course offerings.",
+            "Developed a queuing management system using Laravel and Vue.js for cashier, registrar, and other offices offering services with a kiosk integration and virtual 3D campus tour.",
+            "Built an AI Agent for a ChatSDK that can determine the intent, sentiment, is able to respond to queries, and assess the relevancy of the answers with a QA, with Python, OpenAI, and RAG using a GitHub repository as the knowledge base.",
+            "Configured a PowerEdge R440 server to host an internal Laravel-based document records management system."
         ],
         "jobTechnologies": [
             {

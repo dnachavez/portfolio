@@ -1,34 +1,48 @@
 [
     {
-        "id": "champion-of-hackathon-ccs-days-2023",
-        "certificatePicture": "champion-of-hackathon-ccs-days-2023.webp",
-        "certificateTitle": "Champion of Hackathon",
-        "certificateTime": "December 2023",
-        "certificateName": "CCS Days 2023",
-        "certificateDescription": "Won \"Champion of the Hackathon\" during the CCS Days 2023 Hackathon at the USPF College of Computer Studies, representing the RED Team."
+        "id": "ccs-days-2025-hackathon-overall-champion",
+        "certificatePictures": [
+            "overall-champion.webp",
+            "hackathon-champion.webp",
+            "hackathon-best-innovative-solution.webp"
+        ],
+        "certificateTitle": "CCS Days 2025 Hackathon",
+        "certificateTime": "March 2025",
+        "certificateAwarder": "Mrs. Marie Joy Morano-Sanchez",
+        "certificateDescription": "Contributed the highest points for the team to achieve the overall champion title during the CCS Days 2025 by successfully developing TESTify, an AI exam proctoring system integrated as a tool for Canvas LMS that monitors online exams for cheating using facial and behavioral analysis.",
+        "certificateActivities": [
+            "Hackathon Champion",
+            "Hackathon - Best Innovative Solution"
+        ]
     },
     {
-        "id": "hackathon-most-promising-innovation-ccs-days-2023",
-        "certificatePicture": "hackathon-most-promising-innovation-ccs-days-2023.webp",
-        "certificateTitle": "Hackathon Most Promising Innovation",
+        "id": "ccs-days-2023-hackathon-overall-champion",
+        "certificatePictures": [
+            "champion-of-hackathon-ccs-days-2023.webp",
+            "hackathon-most-promising-innovation-ccs-days-2023.webp",
+            "hackathon-best-in-logo-ccs-days-2023.webp"
+        ],
+        "certificateTitle": "CCS Days 2023 Hackathon",
         "certificateTime": "December 2023",
-        "certificateName": "CCS Days 2023",
-        "certificateDescription": "Got our innovation at RED Team recognized as the \"Most Promising Innovation\" during the CCS Days 2023 Hackathon at the USPF College of Computer Studies."
-    },
-    {
-        "id": "hackathon-best-in-logo-ccs-days-2023",
-        "certificatePicture": "hackathon-best-in-logo-ccs-days-2023.webp",
-        "certificateTitle": "Hackathon Best in Logo",
-        "certificateTime": "December 2023",
-        "certificateName": "CCS Days 2023",
-        "certificateDescription": "Received the \"Best in Logo\" award during the CCS Days 2023 Hackathon (1st–3rd year category), representing the RED Team, at the USPF College of Computer Studies."
+        "certificateAwarder": "Mr. Gian Carlo S. Cataraja, MIT",
+        "certificateDescription": "Successfully developed CERTify, an AI-integrated system designed to certify and authenticate academic records through advanced AI image analysis, tamper detection, and QR code technology.",
+        "certificateActivities": [
+            "Champion of the Hackathon (1st year-3rd year category)",
+            "Hackathon Most Promising Innovation (1st year-3rd year category)",
+            "Hackathon Best-in-Logo (1st year-3rd year category)"
+        ]
     },
     {
         "id": "tcs-empowers-goit-2021",
-        "certificatePicture": "tcs-empowers-goit-2021.webp",
+        "certificatePictures": [
+            "tcs-empowers-goit-2021.webp"
+        ],
         "certificateTitle": "goIT 3rd Place",
         "certificateTime": "November 2021",
-        "certificateName": "TCS Digital Innovation Program",
-        "certificateDescription": "Secured the goIT 3rd place during the TCS Digital Innovation Program as a member of TrackTrace from Dumalag Central National High School, in the Capiz Province Division."
+        "certificateAwarder": "TCS Digital Innovation Program",
+        "certificateDescription": "Secured the goIT 3rd place during the TCS Digital Innovation Program as a member of TrackTrace from Dumalag Central National High School, in the Capiz Province Division.",
+        "certificateActivities": [
+            "Developed a digital contract tracing application for COVID-19"
+        ]
     }
 ]

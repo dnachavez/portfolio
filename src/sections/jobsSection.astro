@@ -19,7 +19,7 @@ import jobs from "../data/jobs.json";
     <div class="flex justify-center">
         {jobs.length > 2 && (
             <button
-                class="accordion-button group mt-6 w-fit justify-center py-3 px-5 pr-6 flex items-center gap-1 sm:gap-2 font-semibold text-base text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-3xl hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
+                class="jobs-toggle-button group mt-6 w-fit justify-center py-3 px-5 pr-6 flex items-center gap-1 sm:gap-2 font-semibold text-base text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-3xl hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
                 id="toggle-jobs"
             >
                 <svg
@@ -40,19 +40,6 @@ import jobs from "../data/jobs.json";
         )}
     </div>
 </section>
-<script>
-    const $accordionButtons = document.querySelectorAll(".accordion-button");
-    $accordionButtons.forEach((btn) => {
-        btn.addEventListener("click", (event) => {
-            const accordionId = (event.currentTarget as HTMLElement).getAttribute("data-target");
-            const $accordion = document.getElementById(accordionId);
-            if ($accordion) {
-                $accordion.classList.toggle("max-h-accordion-expanded");
-            }
-            (event.currentTarget as HTMLElement).classList.toggle("expanded");
-        });
-    });
-</script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         const jobs = document.querySelectorAll('.job-card');

@@ -5,7 +5,8 @@
         "educationTitle": "Bachelor of Science in Computer Science",
         "educationType": "Degree:",
         "educationTime": "August 2022 - Present",
-        "educationCompany": "University of Southern Philippines Foundation"
+        "educationCompany": "University of Southern Philippines Foundation",
+        "educationLink": "https://uspf.edu.ph/"
     },
     {
         "id": "dumalag-central-national-high-school",
