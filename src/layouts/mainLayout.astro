@@ -1,6 +1,7 @@
 ---
 const { title } = Astro.props;
 import "../styles/globals.css";
+import ChatButton from "../components/ChatButton.astro";
 ---
 
 <html lang="en" class="dark">
@@ -61,6 +62,7 @@ import "../styles/globals.css";
     </head>
     <body class="bg-light-fondo-primary dark:bg-dark-fondo-primary">
         <slot />
+        <ChatButton />
         <script>
             const darkThemeMq = window.matchMedia(
                 "(prefers-color-scheme: dark)"
