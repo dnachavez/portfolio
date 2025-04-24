@@ -39,7 +39,6 @@
     </div>
     
     <div class="flex-1 p-4 overflow-y-auto scrollbar-chat" id="chat-messages">
-      <!-- Initial message will be added by JavaScript -->
     </div>
     
     <div class="px-4 py-3 border-t border-gray-200 dark:border-gray-800">
@@ -78,9 +77,9 @@
   #chat-messages {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 111, 255, 0.5) transparent;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
     overflow-y: auto;
-    max-height: calc(100% - 2rem); /* Ensure content is scrollable */
+    max-height: calc(100% - 2rem);
   }
   
   #chat-messages::-webkit-scrollbar {
@@ -99,14 +98,13 @@
   #chat-interface {
     display: flex;
     flex-direction: column;
-    max-height: 80vh; /* Limit height on smaller screens */
+    max-height: 80vh;
   }
   
   #chat-interface > div:not(#chat-messages) {
     flex-shrink: 0;
   }
   
-  /* Markdown styling */
   .markdown-content {
     line-height: 1.5;
   }
@@ -201,7 +199,6 @@
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
-    // Load markdown-it from CDN
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js';
     script.async = true;
@@ -234,25 +231,57 @@
       
       const config = {
         apiUrl: 'https://dnachavez.dev/gemini-proxy.php',
-        typingAnimationDuration: 2000,  // Duration to show typing animation for initial message
-        animationPreDelay: 1000,        // Time to show animation before API call
-        animationPostDelay: 500         // Time to show animation after API call
+        typingAnimationDuration: 2000,
+        animationPreDelay: 1000,
+        animationPostDelay: 500
       };
       
-      const scrollToBottom = () => {
+      const scrollToBottom = (smooth = false) => {
         if (elements.chatMessages) {
           elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
+          if (smooth) {
+            elements.chatMessages.scrollTo({
+              top: elements.chatMessages.scrollHeight,
+              behavior: 'smooth'
+            });
+          } else {
+            elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
+          }
         }
+      };
+      
+      const smoothScrollToMessage = (messageElement) => {
+        if (!elements.chatMessages || !messageElement) return;
+        
+        // Calculate the message top position relative to the scroll container
+        const messageTop = messageElement.offsetTop;
+        // Get the current scroll position
+        const currentScroll = elements.chatMessages.scrollTop;
+        // Get the container height
+        const containerHeight = elements.chatMessages.clientHeight;
+        
+        // If message is already fully visible, no need to scroll
+        if (messageTop >= currentScroll && 
+            messageTop + messageElement.offsetHeight <= currentScroll + containerHeight) {
+          return;
+        }
+        
+        // Scroll to position the message near the top of the visible area
+        const offset = containerHeight * 0.2; // 20% from the top
+        const targetScroll = Math.max(0, messageTop - offset);
+        
+        elements.chatMessages.scrollTo({
+          top: targetScroll,
+          behavior: 'smooth'
+        });
       };
       
       const createDanMessage = (message) => {
         const danMessageDiv = document.createElement('div');
         danMessageDiv.className = 'flex mb-4';
         
-        // Check if the message contains markdown and render it
         let formattedMessage = '';
         try {
-          // Check if window.md is available (markdown-it loaded)
           if (window.md) {
             formattedMessage = window.md.render(message);
           } else {
@@ -270,7 +299,6 @@
           </div>
         `;
         
-        // Add click handler for links to open in new tab
         const links = danMessageDiv.querySelectorAll('a');
         links.forEach(link => {
           link.setAttribute('target', '_blank');
@@ -324,7 +352,6 @@
         
         let step = 0;
         const animationInterval = setInterval(() => {
-          // Exit if the element was removed
           if (!document.body.contains(typingDiv)) {
             clearInterval(animationInterval);
             return;
@@ -332,12 +359,10 @@
           
           step = (step + 1) % 4;
           
-          // Reset all dots
           dot1.style.transform = 'translateY(0px)';
           dot2.style.transform = 'translateY(0px)';
           dot3.style.transform = 'translateY(0px)';
           
-          // Animate one dot at a time
           if (step === 1) {
             dot1.style.transform = 'translateY(-5px)';
           } else if (step === 2) {
@@ -397,7 +422,7 @@
             content: welcomeMessage
           });
           
-          scrollToBottom();
+          smoothScrollToMessage(welcomeElement);
         }, config.typingAnimationDuration);
       };
 
@@ -457,7 +482,7 @@
             content: apiResponse
           });
           
-          scrollToBottom();
+          smoothScrollToMessage(danMessageDiv);
           
         } catch (error) {
           console.error('Error calling API:', error);
@@ -473,7 +498,7 @@
             content: errorMessage
           });
           
-          scrollToBottom();
+          smoothScrollToMessage(errorElement);
         } finally {
           state.isProcessing = false;
         }
@@ -496,7 +521,7 @@
         
         if (elements.chatInput) elements.chatInput.value = '';
         
-        scrollToBottom();
+        scrollToBottom(true);
         
         setTimeout(() => {
           sendToApi(message).finally(() => {
