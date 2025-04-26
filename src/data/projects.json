@@ -1,5 +1,29 @@
 [
     {
+        "id": "think-of-a-title",
+        "carouselImages": ["1.webp", "2.webp", "3.webp"],
+        "projectRepo": "https://github.com/dnachavez/ThinkOfATitle",
+        "projectSite": "https://thinkofatitle.dnachavez.dev/",
+        "projectTitle": "ThinkOfATitle",
+        "projectSlogan": "AI-Powered Title Generator",
+        "projectDescription": "ThinkOfATitle is an AI-powered tool that helps you generate creative and professional titles for academic papers, dissertations, theses, and research documents. It leverages Google's Gemini 2.0 Flash model to generate compelling titles and brief overviews for academic research papers, theses, and dissertations based on your research topic or field.",
+
+        "projectTechnologies": [
+            {
+                "name": "Next.js",
+                "icon": "nextjs"
+            },
+            {
+                "name": "TypeScript",
+                "icon": "typescript"
+            },
+            {
+                "name": "Google Gemini",
+                "icon": "gemini"
+            }
+        ]
+    },
+    {
         "id": "bilis-delivery",
         "carouselImages": ["1.webp", "2.webp"],
         "projectSite": "https://app.bilisdelivery.com/",
