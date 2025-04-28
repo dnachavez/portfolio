@@ -199,10 +199,17 @@
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
+    // Load markdown-it script
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js';
     script.async = true;
     document.head.appendChild(script);
+    
+    // Load utils script
+    const utilsScript = document.createElement('script');
+    utilsScript.type = 'module';
+    utilsScript.src = '/src/utils/chatUtils.js';
+    document.head.appendChild(utilsScript);
     
     script.onload = () => {
       window.md = window.markdownit({
@@ -215,347 +222,159 @@
     };
     
     function initChat() {
-      const elements = {
-        chatButton: document.getElementById('chat-button'),
-        chatInterface: document.getElementById('chat-interface'),
-        closeChat: document.getElementById('close-chat'),
-        chatInput: document.getElementById('chat-input'),
-        sendButton: document.getElementById('send-button'),
-        chatMessages: document.getElementById('chat-messages')
-      };
-      
-      const state = {
-        chatHistory: [],
-        isProcessing: false
-      };
-      
-      const config = {
-        apiUrl: 'https://dnachavez.dev/gemini-proxy.php',
-        typingAnimationDuration: 2000,
-        animationPreDelay: 1000,
-        animationPostDelay: 500
-      };
-      
-      const scrollToBottom = (smooth = false) => {
-        if (elements.chatMessages) {
-          elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
-          if (smooth) {
-            elements.chatMessages.scrollTo({
-              top: elements.chatMessages.scrollHeight,
-              behavior: 'smooth'
-            });
-          } else {
-            elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
-          }
-        }
-      };
-      
-      const smoothScrollToMessage = (messageElement) => {
-        if (!elements.chatMessages || !messageElement) return;
+      // Dynamic import of chat utilities
+      import('/src/utils/chatUtils.js').then(chatUtils => {
+        const elements = {
+          chatButton: document.getElementById('chat-button'),
+          chatInterface: document.getElementById('chat-interface'),
+          closeChat: document.getElementById('close-chat'),
+          chatInput: document.getElementById('chat-input'),
+          sendButton: document.getElementById('send-button'),
+          chatMessages: document.getElementById('chat-messages')
+        };
         
-        // Calculate the message top position relative to the scroll container
-        const messageTop = messageElement.offsetTop;
-        // Get the current scroll position
-        const currentScroll = elements.chatMessages.scrollTop;
-        // Get the container height
-        const containerHeight = elements.chatMessages.clientHeight;
+        const state = {
+          chatHistory: [],
+          isProcessing: false
+        };
         
-        // If message is already fully visible, no need to scroll
-        if (messageTop >= currentScroll && 
-            messageTop + messageElement.offsetHeight <= currentScroll + containerHeight) {
-          return;
-        }
+        const config = {
+          apiUrl: 'https://dnachavez.dev/gemini-proxy.php',
+          typingAnimationDuration: 2000,
+          animationPreDelay: 1000,
+          animationPostDelay: 500
+        };
         
-        // Scroll to position the message near the top of the visible area
-        const offset = containerHeight * 0.2; // 20% from the top
-        const targetScroll = Math.max(0, messageTop - offset);
-        
-        elements.chatMessages.scrollTo({
-          top: targetScroll,
-          behavior: 'smooth'
-        });
-      };
-      
-      const createDanMessage = (message) => {
-        const danMessageDiv = document.createElement('div');
-        danMessageDiv.className = 'flex mb-4';
-        
-        let formattedMessage = '';
-        try {
-          if (window.md) {
-            formattedMessage = window.md.render(message);
-          } else {
-            formattedMessage = message;
-          }
-        } catch (error) {
-          console.error('Error rendering markdown:', error);
-          formattedMessage = message;
-        }
-        
-        danMessageDiv.innerHTML = `
-          <div class="message-left relative max-w-[75%] bg-primary text-white rounded-tr-lg rounded-br-lg rounded-bl-lg py-2 px-3">
-            <div class="absolute left-[-8px] top-0 w-0 h-0 border-t-[8px] border-t-transparent border-r-[12px] border-r-primary border-b-[0px] border-b-transparent"></div>
-            <div class="markdown-content">${formattedMessage}</div>
-          </div>
-        `;
-        
-        const links = danMessageDiv.querySelectorAll('a');
-        links.forEach(link => {
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
-        });
-        
-        return danMessageDiv;
-      };
-      
-      const createUserMessage = (message) => {
-        const userMessageDiv = document.createElement('div');
-        userMessageDiv.className = 'flex justify-end mb-4';
-        userMessageDiv.innerHTML = `
-          <div class="message-right relative max-w-[75%] bg-gray-100 dark:bg-dark-fondo-secondary rounded-tl-lg rounded-bl-lg rounded-br-lg py-2 px-3 text-light-texto-primary dark:text-dark-texto-primary">
-            <div class="absolute right-[-8px] top-0 w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-gray-100 dark:border-l-dark-fondo-secondary border-b-[0px] border-b-transparent"></div>
-            <p>${message}</p>
-          </div>
-        `;
-        return userMessageDiv;
-      };
-      
-      const createTypingAnimation = () => {
-        const typingDiv = document.createElement('div');
-        typingDiv.className = 'flex mb-4';
-        typingDiv.id = 'typing-animation-container';
-        
-        typingDiv.innerHTML = `
-          <div class="message-left relative max-w-[75%] bg-primary text-white rounded-tr-lg rounded-br-lg rounded-bl-lg py-2 px-3">
-            <div class="absolute left-[-8px] top-0 w-0 h-0 border-t-[8px] border-t-transparent border-r-[12px] border-r-primary border-b-[0px] border-b-transparent"></div>
-            <div style="display:flex; justify-content:center; align-items:center; gap:5px;">
-              <div id="dot1" style="width:6px; height:6px; background-color:white; border-radius:50%;"></div>
-              <div id="dot2" style="width:6px; height:6px; background-color:white; border-radius:50%;"></div>
-              <div id="dot3" style="width:6px; height:6px; background-color:white; border-radius:50%;"></div>
-            </div>
-          </div>
-        `;
-        
-        setTimeout(() => {
-          startDotAnimation(typingDiv);
-        }, 100);
-        
-        return typingDiv;
-      };
-      
-      const startDotAnimation = (typingDiv) => {
-        const dot1 = typingDiv.querySelector('#dot1');
-        const dot2 = typingDiv.querySelector('#dot2');
-        const dot3 = typingDiv.querySelector('#dot3');
-        
-        if (!dot1 || !dot2 || !dot3) return;
-        
-        let step = 0;
-        const animationInterval = setInterval(() => {
-          if (!document.body.contains(typingDiv)) {
-            clearInterval(animationInterval);
-            return;
-          }
+        const openChatInterface = () => {
+          if (!elements.chatInterface) return;
           
-          step = (step + 1) % 4;
-          
-          dot1.style.transform = 'translateY(0px)';
-          dot2.style.transform = 'translateY(0px)';
-          dot3.style.transform = 'translateY(0px)';
-          
-          if (step === 1) {
-            dot1.style.transform = 'translateY(-5px)';
-          } else if (step === 2) {
-            dot2.style.transform = 'translateY(-5px)';
-          } else if (step === 3) {
-            dot3.style.transform = 'translateY(-5px)';
-          }
-        }, 200);
-      };
-
-      const openChatInterface = () => {
-        if (!elements.chatInterface) return;
-        
-        elements.chatInterface.style.display = 'flex';
-        
-        setTimeout(() => {
-          elements.chatInterface.style.opacity = '1';
-          elements.chatInterface.style.transform = 'translateY(0)';
+          elements.chatInterface.style.display = 'flex';
           
           setTimeout(() => {
-            elements.chatInput?.focus();
+            elements.chatInterface.style.opacity = '1';
+            elements.chatInterface.style.transform = 'translateY(0)';
             
-            if (elements.chatMessages && elements.chatMessages.children.length === 0) {
-              showWelcomeSequence();
-            }
-            
-            scrollToBottom();
+            setTimeout(() => {
+              elements.chatInput?.focus();
+              
+              if (elements.chatMessages && elements.chatMessages.children.length === 0) {
+                showWelcomeSequence();
+              }
+              
+              chatUtils.scrollToBottom(elements.chatMessages);
+            }, 300);
+          }, 10);
+        };
+        
+        const closeChatInterface = () => {
+          if (!elements.chatInterface) return;
+          
+          elements.chatInterface.style.opacity = '0';
+          elements.chatInterface.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            elements.chatInterface.style.display = 'none';
           }, 300);
-        }, 10);
-      };
-      
-      const closeChatInterface = () => {
-        if (!elements.chatInterface) return;
+        };
         
-        elements.chatInterface.style.opacity = '0';
-        elements.chatInterface.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-          elements.chatInterface.style.display = 'none';
-        }, 300);
-      };
-      
-      const showWelcomeSequence = () => {
-        const typingAnimation = createTypingAnimation();
-        elements.chatMessages.appendChild(typingAnimation);
-        scrollToBottom();
-        
-        setTimeout(() => {
-          removeTypingAnimation();
-          
-          const welcomeMessage = "Hi there! I'm Dan. How can I help you today?";
-          const welcomeElement = createDanMessage(welcomeMessage);
-          elements.chatMessages.appendChild(welcomeElement);
-          
-          state.chatHistory.push({
-            role: 'assistant',
-            content: welcomeMessage
-          });
-          
-          smoothScrollToMessage(welcomeElement);
-        }, config.typingAnimationDuration);
-      };
-
-      const removeTypingAnimation = () => {
-        const typingElement = document.getElementById('typing-animation-container');
-        if (typingElement) {
-          typingElement.remove();
-        }
-      };
-      
-      const sendToApi = async (userMessage) => {
-        if (state.isProcessing) return;
-        
-        state.isProcessing = true;
-        
-        try {
-          removeTypingAnimation();
-          
-          const typingAnimation = createTypingAnimation();
+        const showWelcomeSequence = () => {
+          const typingAnimation = chatUtils.createTypingAnimation();
           elements.chatMessages.appendChild(typingAnimation);
-          scrollToBottom();
+          chatUtils.scrollToBottom(elements.chatMessages);
           
-          await new Promise(resolve => setTimeout(resolve, config.animationPreDelay));
+          setTimeout(() => {
+            chatUtils.removeTypingAnimation();
+            
+            const welcomeMessage = "Hi there! I'm Dan. How can I help you today?";
+            const welcomeElement = chatUtils.createDanMessage(welcomeMessage);
+            elements.chatMessages.appendChild(welcomeElement);
+            
+            state.chatHistory.push({
+              role: 'assistant',
+              content: welcomeMessage
+            });
+            
+            chatUtils.smoothScrollToMessage(elements.chatMessages, welcomeElement);
+          }, config.typingAnimationDuration);
+        };
+        
+        const sendMessage = () => {
+          const message = elements.chatInput?.value.trim();
+          if (!message || !elements.chatMessages) return;
           
-          const response = await fetch(config.apiUrl, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              message: userMessage,
-              history: state.chatHistory
-            }),
-            mode: 'cors'
-          });
+          if (elements.chatInput) elements.chatInput.disabled = true;
+          if (elements.sendButton) elements.sendButton.disabled = true;
           
-          if (!response.ok) {
-            throw new Error(`API responded with status: ${response.status}`);
-          }
-          
-          const data = await response.json();
-          
-          let apiResponse = "Sorry, I couldn't process that request. Please try again.";
-          if (data && data.response) {
-            apiResponse = data.response;
-          }
-          
-          await new Promise(resolve => setTimeout(resolve, config.animationPostDelay));
-          
-          removeTypingAnimation();
-          
-          const danMessageDiv = createDanMessage(apiResponse);
-          elements.chatMessages.appendChild(danMessageDiv);
+          const userMessageDiv = chatUtils.createUserMessage(message);
+          elements.chatMessages.appendChild(userMessageDiv);
           
           state.chatHistory.push({
-            role: 'assistant',
-            content: apiResponse
+            role: 'user',
+            content: message
           });
           
-          smoothScrollToMessage(danMessageDiv);
+          if (elements.chatInput) elements.chatInput.value = '';
           
-        } catch (error) {
-          console.error('Error calling API:', error);
+          chatUtils.scrollToBottom(elements.chatMessages, true);
           
-          removeTypingAnimation();
-          
-          const errorMessage = "Sorry, I'm having trouble connecting right now. Please try again later.";
-          const errorElement = createDanMessage(errorMessage);
-          elements.chatMessages.appendChild(errorElement);
-          
-          state.chatHistory.push({
-            role: 'assistant',
-            content: errorMessage
-          });
-          
-          smoothScrollToMessage(errorElement);
-        } finally {
-          state.isProcessing = false;
-        }
-      };
-      
-      const sendMessage = () => {
-        const message = elements.chatInput?.value.trim();
-        if (!message || !elements.chatMessages) return;
+          setTimeout(() => {
+            chatUtils.sendToApi(
+              message, 
+              state.chatHistory, 
+              config.apiUrl, 
+              elements, 
+              config.animationPreDelay, 
+              config.animationPostDelay
+            ).then(result => {
+              if (result) {
+                state.chatHistory.push({
+                  role: 'assistant',
+                  content: result.content
+                });
+                
+                chatUtils.smoothScrollToMessage(elements.chatMessages, result.messageElement);
+              }
+              
+              if (elements.chatInput) {
+                elements.chatInput.disabled = false;
+                elements.chatInput.focus();
+              }
+              if (elements.sendButton) elements.sendButton.disabled = false;
+            }).catch(() => {
+              if (elements.chatInput) {
+                elements.chatInput.disabled = false;
+                elements.chatInput.focus();
+              }
+              if (elements.sendButton) elements.sendButton.disabled = false;
+            });
+          }, 300);
+        };
         
-        if (elements.chatInput) elements.chatInput.disabled = true;
-        if (elements.sendButton) elements.sendButton.disabled = true;
-        
-        const userMessageDiv = createUserMessage(message);
-        elements.chatMessages.appendChild(userMessageDiv);
-        
-        state.chatHistory.push({
-          role: 'user',
-          content: message
+        elements.chatButton?.addEventListener('click', () => {
+          if (elements.chatInterface) {
+            if (elements.chatInterface.style.display === 'none') {
+              openChatInterface();
+            } else {
+              closeChatInterface();
+            }
+          }
         });
         
-        if (elements.chatInput) elements.chatInput.value = '';
+        elements.closeChat?.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          closeChatInterface();
+        });
         
-        scrollToBottom(true);
+        elements.sendButton?.addEventListener('click', sendMessage);
         
-        setTimeout(() => {
-          sendToApi(message).finally(() => {
-            if (elements.chatInput) {
-              elements.chatInput.disabled = false;
-              elements.chatInput.focus();
-            }
-            if (elements.sendButton) elements.sendButton.disabled = false;
-          });
-        }, 300);
-      };
-      
-      elements.chatButton?.addEventListener('click', () => {
-        if (elements.chatInterface) {
-          if (elements.chatInterface.style.display === 'none') {
-            openChatInterface();
-          } else {
-            closeChatInterface();
+        elements.chatInput?.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            sendMessage();
           }
-        }
-      });
-      
-      elements.closeChat?.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        closeChatInterface();
-      });
-      
-      elements.sendButton?.addEventListener('click', sendMessage);
-      
-      elements.chatInput?.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-          sendMessage();
-        }
+        });
+      }).catch(error => {
+        console.error('Failed to load chat utilities:', error);
       });
     }
   });
