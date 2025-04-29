@@ -1,6 +1,27 @@
 ---
 import jobs from '../data/jobs.json';
-import { calculateTotalExperience } from '../utils/experienceCalculator.js';
+
+// Experience calculator function
+function calculateTotalExperience(jobs) {
+  const workedMonths = new Set();
+  
+  jobs.forEach(job => {
+    const startDate = new Date(job.jobTime.split(' - ')[0]);
+    const endDate = job.jobTime.includes('Present') ? new Date() : new Date(job.jobTime.split(' - ')[1]);
+    
+    const start = new Date(startDate.getFullYear(), startDate.getMonth(), 1);
+    const end = new Date(endDate.getFullYear(), endDate.getMonth(), 1);
+    
+    let current = new Date(start);
+    while (current <= end) {
+      workedMonths.add(`${current.getFullYear()}-${current.getMonth()}`);
+      current.setMonth(current.getMonth() + 1);
+    }
+  });
+  
+  const totalMonths = workedMonths.size;
+  return Math.floor(totalMonths / 12);
+}
 
 const totalYearsExperience = calculateTotalExperience(jobs);
 const experienceDisplay = totalYearsExperience >= 1 ? `${totalYearsExperience}+` : '<1';
@@ -126,7 +147,21 @@ const experienceDisplay = totalYearsExperience >= 1 ? `${totalYearsExperience}+`
 </script> -->
 
 <script>
-    import { fetchTotalLinesOfCode } from '../utils/githubStats.js';
+    // Github stats function
+    async function fetchTotalLinesOfCode() {
+        try {
+            const response = await fetch('https://dnachavez.dev/github-stats.php');
+            if (!response.ok) {
+                throw new Error('Failed to fetch total lines of code');
+            }
+            const data = await response.json();
+            const totalLines = data.totalLines;
+            return totalLines > 1000 ? `${Math.round(totalLines / 1000)}k+` : totalLines.toString();
+        } catch (error) {
+            console.error('Error fetching total lines of code:', error);
+            return 'Error';
+        }
+    }
     
     const updateCodeLines = async () => {
         const linesFormatted = await fetchTotalLinesOfCode();
