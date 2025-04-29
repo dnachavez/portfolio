@@ -323,6 +323,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (nextBtn) nextBtn.style.display = currentSlide === items.length - 1 ? 'none' : 'flex';
         };
         
+        // Initialize the counter display
+        updateCarousel();
+        
         // Set up intersection observer to detect current slide
         const options = {
             root: carousel,

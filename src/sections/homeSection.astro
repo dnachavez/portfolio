@@ -41,10 +41,11 @@ const experienceDisplay = totalYearsExperience >= 1 ? `${totalYearsExperience}+`
             class="text-[3.3rem] sm:text-[3.3rem] md:text-[4.2rem] font-black leading-[3rem] sm:leading-[4rem] text-[#111] dark:text-[#f3f3f3]"
             id="slogan0"
         >
-            Experienced <span
-                class="text-primary">full-stack developer</span
-            > with a focus on <span
-                class="text-primary">back-end development</span
+            <span
+                class="text-primary">Full Stack Engineer</span> and <span class="text-primary">AI Engineer</span
+            > with expertise in <span
+                class="text-primary expertise-container" id="expertise-container"><span id="expertise-text"></span>
+                <span class="typing-cursor">|</span></span
             >.
         </p>
     </div>
@@ -147,7 +148,6 @@ const experienceDisplay = totalYearsExperience >= 1 ? `${totalYearsExperience}+`
 </script> -->
 
 <script>
-    // Github stats function
     async function fetchTotalLinesOfCode() {
         try {
             const response = await fetch('https://dnachavez.dev/github-stats.php');
@@ -169,4 +169,62 @@ const experienceDisplay = totalYearsExperience >= 1 ? `${totalYearsExperience}+`
     };
 
     updateCodeLines();
+    
+    const expertiseOptions = [
+        "Full Stack Applications",
+        "Back End Systems",
+        "AI Agents"
+    ];
+    
+    const expertiseText = document.getElementById('expertise-text');
+    const expertiseContainer = document.getElementById('expertise-container');
+    let currentIndex = 0;
+    let isTyping = true;
+    let textPosition = 0;
+    let currentText = '';
+    
+    const style = document.createElement('style');
+    style.textContent = `
+        .expertise-container {
+            display: inline-block;
+            min-height: 1.2em;
+        }
+        .typing-cursor {
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    function typeText() {
+        const targetText = expertiseOptions[currentIndex];
+        
+        if (isTyping) {
+            if (textPosition < targetText.length) {
+                currentText = targetText.substring(0, textPosition + 1);
+                expertiseText.textContent = currentText;
+                textPosition++;
+                setTimeout(typeText, 100);
+            } else {
+                isTyping = false;
+                setTimeout(typeText, 2000);
+            }
+        } else {
+            if (textPosition > 0) {
+                currentText = targetText.substring(0, textPosition - 1);
+                expertiseText.textContent = currentText;
+                textPosition--;
+                setTimeout(typeText, 50);
+            } else {
+                isTyping = true;
+                currentIndex = (currentIndex + 1) % expertiseOptions.length;
+                setTimeout(typeText, 500);
+            }
+        }
+    }
+    
+    typeText();
 </script>

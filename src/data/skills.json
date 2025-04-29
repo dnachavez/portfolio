@@ -36,6 +36,10 @@
         "skillPicture": "bootstrap.svg"
     },
     {
+        "skillName": "OpenAI",
+        "skillPicture": "openai.svg"
+    },
+    {
         "skillName": "jQuery",
         "skillPicture": "jquery.svg"
     },
@@ -55,7 +59,10 @@
         "skillName": "Next.js",
         "skillPicture": "nextjs.svg"
     },
-    
+    {
+        "skillName": "Gemini",
+        "skillPicture": "gemini.svg"
+    },
     {
         "skillName": "WordPress",
         "skillPicture": "wordpress.svg"
@@ -83,6 +90,10 @@
     {
         "skillName": "LangChain",
         "skillPicture": "langchain.svg"
+    },
+    {
+        "skillName": "Anthropic",
+        "skillPicture": "anthropic.svg"
     },
     {
         "skillName": "Adobe Photoshop",
