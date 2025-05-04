@@ -1,5 +1,21 @@
 [
     {
+        "id": "google-data-analytics-professional-certificate",
+        "certificatePictures": [
+            "google-data-analytics-professional-certificate-v2.webp"
+        ],
+        "certificateTitle": "Google Data Analytics Professional Certificate",
+        "certificateTime": "April 2024",
+        "certificateAwarder": "Google",
+        "certificateDescription": "Completed an intensive 8-course program covering the entire data analytics process including data preparation, analysis, visualization, and presentation. Gained expertise in key analytical tools such as SQL, R, and Tableau.",
+        "certificateActivities": [
+            "Mastered data cleaning, analysis, and visualization techniques",
+            "Applied SQL for database querying and data manipulation",
+            "Developed R programming skills for statistical analysis",
+            "Created effective data visualizations and dashboards"
+        ]
+    },
+    {
         "id": "ccs-days-2025-hackathon-overall-champion",
         "certificatePictures": [
             "overall-champion.webp",

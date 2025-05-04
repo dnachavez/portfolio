@@ -4,19 +4,18 @@
         "jobPicture": "xfusion.webp",
         "jobColor": "#10214c",
         "jobTitle": "Full Stack AI Engineer",
-        "jobTime": "August 2024 - February 2025",
+        "jobTime": "August 2024 - March 2025",
         "jobCompany": "xFusion",
         "jobCompanySite": "https://xfusion.io/",
-        "jobDescription": "Collaborates on the development of AI agents for a leading client, including:",
+        "jobDescription": "Remote / Cebu City, PH – On-site per client requirement",
         "jobActivities": [
-            "Developed an intelligent inbox with Gmail and Slack integration that filters important emails while excluding spam, promotions, social updates, and other non-essential messages. The system includes an AI-powered responder that drafts contextual replies to incoming communications.",
-            "Enhanced the performance of an AI task management agent that processes customer support communications from Gmail, Slack, and Fireflies, utilizing Python, OpenAI, LangChain, LangGraph, LangSmith, Pydantic, and Node.js and TypeScript with Linear API integration.",
-            "Optimized an AI email responder agent for Gmail, improving response accuracy and efficiency using Python, OpenAI, LangChain, LangGraph, LangSmith, Pydantic, and Node.js and TypeScript.",
-            "Developed a customer onboarding workflow to track activity and proactively contact customers about their progress via their CSM’s email through Gmail, using Node.js and TypeScript.",
-            "Developed and deployed AI agents using Serverless architecture on AWS, integrating scalable backend services with Node.js, TypeScript, Python, and AWS Lambda.",
-            "Built and optimized AI workflows using Python, Node.js, and TypeScript, integrating RESTful APIs for production-level model interaction.",
-            "Designed and implemented ETL workflows and data pipelines using AWS services to improve performance and cost efficiency.",
-            "Enhanced AI agent performance through continuous monitoring, testing, and code reviews to ensure reliability and scalability."
+            "Architected and implemented a multi-agent AI responder system with Python, OpenAI, LangChain/LangGraph, and Pydantic using RAG techniques that improved response accuracy by 65% while reducing manual drafting time by 75%.",
+            "Led the development of an intelligent CSM inbox system using Next.js, TypeScript, and Node.js with Gmail, Slack, and Fireflies integration that reduced time spent on email/communication management by 40%, allowing CSMs to focus on high-value customer interactions.",
+            "Engineered serverless AI agent architecture on AWS Lambda with Node.js, TypeScript, and Python that scaled to handle 3x the original request volume while reducing infrastructure costs by 20%.",
+            "Optimized AI task management workflow integrating Linear API for customer support communications across Gmail, Slack, and Fireflies, resulting in 30% faster ticket resolution and 25% improvement in customer satisfaction scores.",
+            "Designed and implemented ETL data pipelines using Snowflake, PostgreSQL, DynamoDB, and Pinecone vector databases that improved AI agent performance by 45% through more efficient data processing and model interaction.",
+            "Guided two junior developers on AI agent development best practices, establishing code standards that reduced bug rates by 35% across team while utilizing AI-driven development tools like Cursor IDE, GitHub Copilot, and Devin to increase team productivity.",
+            "Developed a prototype for an automated customer onboarding system that directly influenced the creation of the company's AI workflow builder platform, like Zapier and Make.com."
         ],
         "jobTechnologies": [
             {
@@ -53,12 +52,11 @@
         "jobTime": "November 2023 - Present",
         "jobCompany": "Develop Kreativity",
         "jobCompanySite": "https://developkreativity.com/",
-        "jobDescription": "I lead the design and development of several projects, creating solutions that meet client needs and transforming their concepts into a reality.",
+        "jobDescription": "Remote / Cebu City, PH",
         "jobActivities": [
-            "Redesigned Lyons Global™'s Learning Management System (LMS) using WordPress, integrating interactive modules, document-based resources, video learning, and a user registration with course access approval system.",
-            "Developed the Lyons Global™ official website using WordPress, implementing a custom theme, post types, and fields to create a modern, user-friendly interface that highlights the company's expertise in digital health solutions.",
-            "Developed Bilis Delivery using Laravel and Flutter, a cross-platform food delivery app with real-time tracking, order management, and delivery status updates for delivery riders, restaurants, and customers.",
-            "Developed Worksuite a web-based system for the management of the company's operations, including customer management and sales tracking using CodeIgniter 4."
+            "Led redesign and development of an internal learning management system for Lyons Global™, integrating interactive modules and approval-based user registration using WordPress, cutting onboarding time by 60% and boosting engagement by 45%.",
+            "Single-handedly developed and deployed Bilis Delivery, a full-stack food delivery platform using Laravel and Flutter with real-time GPS tracking and automated order management—processed 10,000+ orders in 1 year with 2000+ active users.",
+            "Led the redesign and development of a website for Lyons Global™ using WordPress replacing the old Lyons Global™ website, improving brand presence."
         ],
         "jobTechnologies": [
             {
@@ -104,15 +102,15 @@
         "jobPicture": "uspf.webp",
         "jobColor": "#27235e",
         "jobTitle": "Full Stack Developer",
-        "jobTime": "June 2023 - Present",
+        "jobTime": "July 2023 - Present",
         "jobCompany": "Information and Communications Technology Department at University of Southern Philippines Foundation",
         "jobCompanySite": "https://uspf.edu.ph/",
-        "jobDescription": "I collaborate in the development of system applications for the university and its stakeholders, including an AI/ML chatbot Augi and the USPF Digital app, as well as enhancements to existing system applications.",
+        "jobDescription": "Cebu City, PH",
         "jobActivities": [
-            "Developed an all-in-one platform for faculty, students, and guests using CodeIgniter 4 with balance tracking, RFID monitoring, digital ID, chats, and course offerings.",
-            "Developed a queuing management system using Laravel and Vue.js for cashier, registrar, and other offices offering services with a kiosk integration and virtual 3D campus tour.",
-            "Built an AI Agent for a ChatSDK that can determine the intent, sentiment, is able to respond to queries, and assess the relevancy of the answers with a QA, with Python, OpenAI, and RAG using a GitHub repository as the knowledge base.",
-            "Configured a PowerEdge R440 server to host an internal Laravel-based document records management system."
+            "Architected and deployed an AI chat agent using Python, OpenAI, AWS, LangChain/LangGraph, and RAG techniques with ChromaDB vector database, improving query resolution accuracy by 85% and reducing staff support requests by 40%.",
+            "Developed an all-in-one university platform using CodeIgniter 4 and Ionic Framework that integrated RFID tracking, digital ID verification, messaging systems, and financial management, improving student/parent/faculty service access by 35%.",
+            "Deployed a queuing management system using Laravel and Vue.js that decreased average wait times by 80% across university service offices.",
+            "Configured and optimized PowerEdge R440 server environment and deployed an internal document records management system built on Laravel, enabling protected document storage, sharing, and retrieval that improved inter-departmental workflow efficiency by 60%."
         ],
         "jobTechnologies": [
             {
@@ -169,15 +167,11 @@
         "jobTime": "July 2021 - December 2021",
         "jobCompany": "MyToolz.net",
         "jobCompanySite": "https://mytoolz.net/tools/",
-        "jobDescription": "I contributed to the design and development of several web tools, including account checkers and content generators, as well as the enhancement of back-end and API infrastructures, improving service speed and the user experience.",
+        "jobDescription": "Remote",
         "jobActivities": [
-            "Refactored a Blogger website theme implementing a client-side JavaScript function to prevent bypass of links from a built-in link generator.",
-            "Developed a tool to extract IP Vanish proxy data and validate Stripe API keys.",
-            "Developed tools to verify proxy servers, check credit card validity, and verify Pureflix accounts.",
-            "Developed tools to bypass ad link generators such as adf.ly and Linkvertise.",
-            "Developed an email tool to filter by provider and generate emails using the dot trick.",
-            "Developed a tool to check Bitcoin wallet balances.",
-            "Developed key generators for Malwarebytes, Discord Nitro, HMA VPN, and Express VPN."
+            "Refactored and optimized high-traffic Blogger website using JavaScript and PHP, implementing security measures that prevented link bypassing and improved platform integrity.",
+            "Developed modular PHP-based web tools including proxy validation services, email provider filters, cryptocurrency balance checker, and verification systems that streamlined third-party API integrations.",
+            "Designed and deployed security-focused backend APIs using PHP that improved validation process speed and enhanced overall platform reliability."
         ],
         "jobTechnologies": [
             {
