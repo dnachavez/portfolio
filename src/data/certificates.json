@@ -7,12 +7,12 @@
         "certificateTitle": "Google Data Analytics Professional Certificate",
         "certificateTime": "April 2024",
         "certificateAwarder": "Google",
-        "certificateDescription": "Completed an intensive 8-course program covering the entire data analytics process including data preparation, analysis, visualization, and presentation. Gained expertise in key analytical tools such as SQL, R, and Tableau.",
+        "certificateDescription": "Completed comprehensive 8-course program covering end-to-end data analytics processes including data preparation, transformation, analysis, visualization, and strategic insights presentation. Developed advanced proficiency in SQL, R programming, and Tableau for enterprise-grade analytics solutions.",
         "certificateActivities": [
-            "Mastered data cleaning, analysis, and visualization techniques",
-            "Applied SQL for database querying and data manipulation",
-            "Developed R programming skills for statistical analysis",
-            "Created effective data visualizations and dashboards"
+            "Implemented advanced data cleaning techniques and statistical analysis methodologies",
+            "Engineered complex SQL queries for efficient data extraction and transformation",
+            "Developed statistical models and data pipelines using R programming",
+            "Designed executive-level dashboards and visualizations for data-driven decision making"
         ]
     },
     {
@@ -25,10 +25,10 @@
         "certificateTitle": "CCS Days 2025 Hackathon",
         "certificateTime": "March 2025",
         "certificateAwarder": "Mrs. Marie Joy Morano-Sanchez",
-        "certificateDescription": "Contributed the highest points for the team to achieve the overall champion title during the CCS Days 2025 by successfully developing TESTify, an AI exam proctoring system integrated as a tool for Canvas LMS that monitors online exams for cheating using facial and behavioral analysis.",
+        "certificateDescription": "Led the development of TESTify, an AI-powered exam integrity platform integrated with Canvas LMS that leverages computer vision and machine learning to detect academic dishonesty through facial recognition and behavioral pattern analysis, securing the Overall Champion award.",
         "certificateActivities": [
-            "Hackathon Champion",
-            "Hackathon - Best Innovative Solution"
+            "Awarded Hackathon Champion for technical excellence and solution completeness",
+            "Recognized with Best Innovative Solution for pioneering AI-based proctoring technology"
         ]
     },
     {
@@ -41,11 +41,11 @@
         "certificateTitle": "CCS Days 2023 Hackathon",
         "certificateTime": "December 2023",
         "certificateAwarder": "Mr. Gian Carlo S. Cataraja, MIT",
-        "certificateDescription": "Successfully developed CERTify, an AI-integrated system designed to certify and authenticate academic records through advanced AI image analysis, tamper detection, and QR code technology.",
+        "certificateDescription": "Built CERTify, an authentication system that implements blockchain-inspired verification, AI-powered forgery detection, and cryptographic security to ensure document integrity for academic credentials.",
         "certificateActivities": [
-            "Champion of the Hackathon (1st year-3rd year category)",
-            "Hackathon Most Promising Innovation (1st year-3rd year category)",
-            "Hackathon Best-in-Logo (1st year-3rd year category)"
+            "Awarded Champion of the Hackathon for the 1st year-3rd year category",
+            "Awarded Most Promising Innovation for market-ready solution addressing real-world credential verification challenges",
+            "Recognized for brand identity excellence with Best-in-Logo award"
         ]
     },
     {
@@ -56,9 +56,9 @@
         "certificateTitle": "goIT 3rd Place",
         "certificateTime": "November 2021",
         "certificateAwarder": "TCS Digital Innovation Program",
-        "certificateDescription": "Secured the goIT 3rd place during the TCS Digital Innovation Program as a member of TrackTrace from Dumalag Central National High School, in the Capiz Province Division.",
+        "certificateDescription": "Developed a scalable COVID-19 contact tracing platform as technical lead for TrackTrace, securing 3rd place recognition in the TCS Digital Innovation Program competition against teams from across Capiz Province.",
         "certificateActivities": [
-            "Developed a digital contract tracing application for COVID-19"
+            "Designed and implemented full-stack contact tracing solution with geolocation and exposure notification system"
         ]
     }
 ]

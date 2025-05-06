@@ -119,18 +119,37 @@ function calculateDuration(jobTime) {
                 {jobTime} {calculateDuration(jobTime)}
             </small>
         </div>
-        <p class="text-[1.1rem] sm:text-base text-light-texto-secondary dark:text-dark-texto-secondary">
-            {jobDescription}
-        </p>
-        <div class="job-accordion flex flex-col max-h-0 overflow-hidden transition-all gap-6 duration-300" id={`job-accordion-${id}`}>
-            <div class="flex flex-col gap-2 mt-6">
+        {jobDescription ? (
+            <p class="text-[1.1rem] sm:text-base text-light-texto-secondary dark:text-dark-texto-secondary">
+                {jobDescription}
+            </p>
+        ) : jobActivities && jobActivities.length > 0 ? (
+            <div class="flex flex-col">
                 <h2 class="text-light-texto-primary dark:text-dark-texto-primary font-bold">
                     Activities
                 </h2>
-                <ul class="ml-6 text-light-texto-secondary dark:text-dark-texto-secondary list-outside list-disc">
-                    {jobActivities.map((activity) => <li>{activity}</li>)}
+                <ul class="ml-6 text-[1.1rem] sm:text-base text-light-texto-secondary dark:text-dark-texto-secondary list-outside list-disc">
+                    <li>{jobActivities[0]}</li>
                 </ul>
             </div>
+        ) : null}
+        <div class="job-accordion flex flex-col max-h-0 overflow-hidden transition-all gap-6 duration-300" id={`job-accordion-${id}`}>
+            {!jobDescription && jobActivities && jobActivities.length > 1 ? (
+                <div class="flex flex-col gap-2 mt-2">
+                    <ul class="ml-6 text-light-texto-secondary dark:text-dark-texto-secondary list-outside list-disc">
+                        {jobActivities.slice(1).map((activity) => <li>{activity}</li>)}
+                    </ul>
+                </div>
+            ) : jobActivities && jobActivities.length > 0 ? (
+                <div class="flex flex-col gap-2 mt-6">
+                    <h2 class="text-light-texto-primary dark:text-dark-texto-primary font-bold">
+                        Activities
+                    </h2>
+                    <ul class="ml-6 text-light-texto-secondary dark:text-dark-texto-secondary list-outside list-disc">
+                        {jobActivities.map((activity) => <li>{activity}</li>)}
+                    </ul>
+                </div>
+            ) : null}
             <div class="flex flex-col gap-2 mb-1">
                 <h2 class="text-light-texto-primary dark:text-dark-texto-primary font-bold">
                     Technologies

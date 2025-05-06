@@ -8,13 +8,13 @@
         "jobCompany": "xFusion",
         "jobCompanySite": "https://xfusion.io/",
         "jobActivities": [
-            "Architected and implemented a multi-agent AI responder system with Python, OpenAI, LangChain/LangGraph, and Pydantic using RAG techniques that improved response accuracy by 65% while reducing manual drafting time by 75%.",
-            "Led the development of an intelligent CSM inbox system using Next.js, TypeScript, and Node.js with Gmail, Slack, and Fireflies integration that reduced time spent on email/communication management by 40%, allowing CSMs to focus on high-value customer interactions.",
-            "Engineered serverless AI agent architecture on AWS Lambda with Node.js, TypeScript, and Python that scaled to handle 3x the original request volume while reducing infrastructure costs by 20%.",
-            "Optimized AI task management workflow integrating Linear API for customer support communications across Gmail, Slack, and Fireflies, resulting in 30% faster ticket resolution and 25% improvement in customer satisfaction scores.",
-            "Designed and implemented ETL data pipelines using Snowflake, PostgreSQL, DynamoDB, and Pinecone vector databases that improved AI agent performance by 45% through more efficient data processing and model interaction.",
-            "Guided two junior developers on AI agent development best practices, establishing code standards that reduced bug rates by 35% across team while utilizing AI-driven development tools like Cursor IDE, GitHub Copilot, and Devin to increase team productivity.",
-            "Developed a prototype for an automated customer onboarding system that directly influenced the creation of the company's AI workflow builder platform, like Zapier and Make.com."
+            "Built multi-agent AI responder system with Python, OpenAI, LangChain/LangGraph using RAG techniques, improving response accuracy by 65% and cutting manual drafting time by 75%.",
+            "Developed intelligent CSM inbox system with Next.js, TypeScript, Node.js integrating Gmail, Slack, and Fireflies, reducing communication management time by 40% and enabling focus on high-value customer interactions.",
+            "Designed serverless architecture on AWS Lambda using Node.js, TypeScript, and Python that scaled to handle 3x the original request volume while reducing infrastructure costs by 20%.",
+            "Optimized AI task management workflow with Linear API connecting support communications across platforms, resulting in 30% faster ticket resolution and 25% higher customer satisfaction scores.",
+            "Implemented ETL data pipelines with Snowflake, PostgreSQL, DynamoDB, and Pinecone vector databases, improving AI agent performance by 45% through optimized data processing.",
+            "Mentored junior developers on AI agent development, establishing code standards that reduced bug rates by 35% while leveraging AI tools (Cursor IDE, io.Dev) to boost team productivity.",
+            "Prototyped automated customer onboarding system that became foundation for company's AI workflow builder platform (similar to Zapier/Make.com)."
         ],
         "jobTechnologies": [
             {
@@ -38,23 +38,26 @@
                 "icon": "serverless"
             },
             {
-                "name": "LangChain",
+                "name": "LangChain/LangGraph/LangSmith",
                 "icon": "langchain"
             }
         ]
     },
     {
-        "id": "develop-kreativity",
+        "id": "bilis-delivery",
         "jobPicture": "developkreativity.webp",
         "jobColor": "#006fff",
-        "jobTitle": "Co-Founder and Project Lead",
-        "jobTime": "November 2023 - Present",
-        "jobCompany": "Develop Kreativity",
+        "jobTitle": "Lead Full Stack Developer",
+        "jobTime": "April 2024 - Present",
+        "jobCompany": "Bilis Delivery",
         "jobCompanySite": "https://developkreativity.com/",
         "jobActivities": [
-            "Led redesign and development of an internal learning management system for Lyons Global™, integrating interactive modules and approval-based user registration using WordPress, cutting onboarding time by 60% and boosting engagement by 45%.",
-            "Single-handedly developed and deployed Bilis Delivery, a full-stack food delivery platform using Laravel and Flutter with real-time GPS tracking and automated order management—processed 10,000+ orders in 1 year with 2000+ active users.",
-            "Led the redesign and development of a website for Lyons Global™ using WordPress replacing the old Lyons Global™ website, improving brand presence."
+            "Built food delivery platform using Laravel backend and Flutter for mobile/web frontend that processed 10,000+ orders for 2,000+ active users with 99.9% uptime in the first year.",
+            "Implemented real-time order tracking and notification system using WebSockets and Google Maps API, enabling customers to monitor deliveries with high accuracy.",
+            "Integrated secure payment processing with multiple gateways (Credit Card, COD) and developed automated driver matching algorithm based on proximity and availability.",
+            "Created scalable backend with database optimization for consistent transaction handling, maintaining 99.9% uptime while processing 100+ concurrent orders during peak hours.",
+            "Designed role-based authentication system providing granular permission controls for customers, drivers, restaurant owners, and admins.",
+            "Created modular backend services for order management, driver assignment, and payment processing."
         ],
         "jobTechnologies": [
             {
@@ -62,8 +65,51 @@
                 "icon": "php"
             },
             {
-                "name": "CodeIgniter",
-                "icon": "codeigniter"
+                "name": "Laravel",
+                "icon": "laravel"
+            },
+            {
+                "name": "Flutter",
+                "icon": "flutter"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "javascript"
+            },
+            {
+                "name": "MySQL",
+                "icon": "mysql"
+            },
+            {
+                "name": "Firebase",
+                "icon": "firebase"
+            },
+            {
+                "name": "Google Maps API",
+                "icon": "google"
+            }
+        ]
+    },
+    {
+        "id": "develop-kreativity",
+        "jobPicture": "developkreativity.webp",
+        "jobColor": "#006fff",
+        "jobTitle": "Co-Founder & Project Lead",
+        "jobTime": "November 2023 - Present",
+        "jobCompany": "Develop Kreativity",
+        "jobCompanySite": "https://developkreativity.com/",
+        "jobActivities": [
+            "Redesigned Lyons Global™ learning management system with interactive modules and approval-based registration using WordPress, reducing onboarding time by 60% and increasing user engagement by 45%.",
+            "Redesigned Lyons Global™ corporate website on WordPress, implementing responsive design patterns and optimizing performance scores from 65 to 95 on PageSpeed Insights."
+        ],
+        "jobTechnologies": [
+            {
+                "name": "PHP",
+                "icon": "php"
+            },
+            {
+                "name": "WordPress",
+                "icon": "wordpress"
             },
             {
                 "name": "JavaScript",
@@ -82,16 +128,8 @@
                 "icon": "mysql"
             },
             {
-                "name": "WordPress",
-                "icon": "wordpress"
-            },
-            {
                 "name": "Figma",
                 "icon": "figma"
-            },
-            {
-                "name": "cPanel",
-                "icon": "cpanel"
             }
         ]
     },
@@ -101,13 +139,13 @@
         "jobColor": "#27235e",
         "jobTitle": "Full Stack Developer",
         "jobTime": "July 2023 - Present",
-        "jobCompany": "Information and Communications Technology Department at University of Southern Philippines Foundation",
+        "jobCompany": "University of Southern Philippines Foundation",
         "jobCompanySite": "https://uspf.edu.ph/",
         "jobActivities": [
-            "Architected and deployed an AI chat agent using Python, OpenAI, AWS, LangChain/LangGraph, and RAG techniques with ChromaDB vector database, improving query resolution accuracy by 85% and reducing staff support requests by 40%.",
-            "Developed an all-in-one university platform using CodeIgniter 4 and Ionic Framework that integrated RFID tracking, digital ID verification, messaging systems, and financial management, improving student/parent/faculty service access by 35%.",
-            "Deployed a queuing management system using Laravel and Vue.js that decreased average wait times by 80% across university service offices.",
-            "Configured and optimized PowerEdge R440 server environment and deployed an internal document records management system built on Laravel, enabling protected document storage, sharing, and retrieval that improved inter-departmental workflow efficiency by 60%."
+            "Built AI chat agent with Python, OpenAI, and RAG techniques using ChromaDB vector database, achieving 85% query resolution accuracy and reducing staff support requests by 40%.",
+            "Designed distributed university platform on CodeIgniter 4 with Ionic Framework frontend, implementing real-time RFID tracking system, secure digital ID verification, and integrated financial management, improving service access by 35%.",
+            "Created queuing management system using Laravel and Vue.js, decreasing wait times by 80% across university service offices.",
+            "Optimized PowerEdge R440 server architecture and built internal document records system on Laravel with role-based access control, improving inter-departmental workflow efficiency by 60%."
         ],
         "jobTechnologies": [
             {
@@ -119,40 +157,32 @@
                 "icon": "codeigniter"
             },
             {
+                "name": "Laravel",
+                "icon": "laravel"
+            },
+            {
+                "name": "Vue.js",
+                "icon": "vue"
+            },
+            {
+                "name": "Ionic",
+                "icon": "ionic"
+            },
+            {
+                "name": "Python",
+                "icon": "python"
+            },
+            {
                 "name": "JavaScript",
                 "icon": "javascript"
-            },
-            {
-                "name": "HTML",
-                "icon": "html"
-            },
-            {
-                "name": "CSS",
-                "icon": "css"
             },
             {
                 "name": "MySQL",
                 "icon": "mysql"
             },
             {
-                "name": "Bootstrap",
-                "icon": "bootstrap"
-            },
-            {
-                "name": "jQuery",
-                "icon": "jquery"
-            },
-            {
-                "name": "cPanel",
-                "icon": "cpanel"
-            },
-            {
                 "name": "AWS",
                 "icon": "aws"
-            },
-            {
-                "name": "Git",
-                "icon": "git"
             }
         ]
     },

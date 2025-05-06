@@ -150,7 +150,7 @@ const experienceDisplay = totalYearsExperience >= 1 ? `${totalYearsExperience}+`
 <script>
     async function fetchTotalLinesOfCode() {
         try {
-            const response = await fetch('https://dnachavez.dev/github-stats.php');
+            const response = await fetch('https://api.dnachavez.dev/portfolio/github.php');
             if (!response.ok) {
                 throw new Error('Failed to fetch total lines of code');
             }
