@@ -1,4 +1,6 @@
 ---
+import { Carousel } from "./Carousel.jsx";
+
 const {
     id,
     certificatePictures,
@@ -41,88 +43,6 @@ const {
             pointer-events: none;
         }
     }
-
-    .carousel-viewport {
-        display: flex;
-        gap: 0;
-        height: fit-content;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        transition: all 0.2s;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    .carousel-viewport::-webkit-scrollbar {
-        display: none;
-    }
-
-    .carousel-item {
-        flex-shrink: 0;
-        flex-grow: 0;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        gap: 0;
-        width: 100%;
-        position: relative;
-    }
-
-    .carousel-nav-button {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 26px;
-        width: 26px;
-        border: 0;
-        border-radius: 50%;
-        color: var(--light-texto-secondary);
-        background-color: rgba(255, 255, 255, 0.7);
-        transition: background-color 0.2s;
-        z-index: 10;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .carousel-nav-button:hover {
-        background-color: rgba(255, 255, 255, 0.95);
-    }
-
-    .carousel-nav-button.prev {
-        left: 8px;
-        padding-right: 2px;
-    }
-
-    .carousel-nav-button.next {
-        right: 8px;
-    }
-
-    .carousel-counter {
-        position: absolute;
-        right: 8px;
-        bottom: 8px;
-        padding: 4px 8px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 6px;
-        color: var(--light-texto-secondary);
-        font-size: 0.75rem;
-        font-weight: bold;
-        z-index: 10;
-    }
-
-    .tooltip {
-        position: absolute;
-        display: none;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 3px 12px;
-        border-radius: 6px;
-        font-size: 0.875rem;
-        pointer-events: none;
-        z-index: 20;
-    }
 </style>
 <article
     class="certificate-card group relative flex flex-col pl-6 gap-4 sm:w-[50%] sm:even:translate-x-full pr-0 sm:odd:pl-0 odd:pr-6"
@@ -131,62 +51,15 @@ const {
         class="circle gradient absolute top-0 left-[-10px] h-[24px] w-[24px] rounded-full z-[1]"
     ></span>
     <div
-        class="certificate-picture top-0 sm:absolute h-[220px] w-[320px] object-contain rounded-3xl cursor-pointer relative overflow-hidden bg-black"
+        class="certificate-picture top-0 sm:absolute h-[220px] w-[320px] object-contain rounded-3xl relative overflow-hidden bg-black"
     >
-        <ul class="carousel-viewport" id={`carousel-${id}`}>
-            {certificatePictures.map((picture, index) => (
-                <li class="carousel-item" data-index={index}>
-                    <a href={certificateSite ? certificateSite : `/certificates/${id}/${picture}`} target="_blank" rel="noopener noreferrer">
-                        <img
-                            class="w-full h-full"
-                            src={`/certificates/${id}/${picture}`}
-                            alt={`Certificate ${index+1} of ${certificateTitle} from ${certificateAwarder}`}
-                            loading="lazy"
-                        />
-                    </a>
-                </li>
-            ))}
-        </ul>
-        <div class="tooltip">View</div>
-        {certificatePictures.length > 1 && (
-            <>
-                <button class="carousel-nav-button prev" id={`prev-${id}`} aria-label="Previous image">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2.5"
-                        stroke="currentColor"
-                        height="16"
-                        width="16"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M15.75 19.5L8.25 12l7.5-7.5"
-                        />
-                    </svg>
-                </button>
-                <button class="carousel-nav-button next" id={`next-${id}`} aria-label="Next image">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2.5"
-                        stroke="currentColor"
-                        height="16"
-                        width="16"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                        />
-                    </svg>
-                </button>
-                <span class="carousel-counter" id={`counter-${id}`}>1 / {certificatePictures.length}</span>
-            </>
-        )}
+        <Carousel 
+            client:visible 
+            images={certificatePictures} 
+            path={id} 
+            type="certificates" 
+            link={null}
+        />
     </div>
     <div class="info flex flex-col justify-center">
         <div class="flex flex-col mb-4">
@@ -195,25 +68,42 @@ const {
             >
                 {certificateTitle}
             </h1>
-            <a
-                href={certificateSite || "#"}
-                target={certificateSite ? "_blank" : "_self"}
-                class={certificateSite ? "hover:underline" : "pointer-events-none"}
-            >
+            {certificateSite ? (
+                <a 
+                    href={certificateSite} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base hover:underline"
+                    style="display: inline-flex; align-items: center; gap: 4px;"
+                >
+                    {certificateAwarder}
+                    <svg
+                        class="inline text-light-gray-primary dark:text-dark-gray-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <polyline points="15 3 21 3 21 9" />
+                        <>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </>
+                    </svg>
+                </a>
+            ) : (
                 <span
                     class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
                     style="display: inline-flex; align-items: center; gap: 4px;"
                 >
                     {certificateAwarder}
-                    {certificateSite && (
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                    )}
                 </span>
-            </a>
+            )}
             <small
                 class="mt-1 text-light-gray-primary dark:text-dark-gray-primary italic text-[0.91rem]"
             >
@@ -259,8 +149,6 @@ const {
 </article>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const certificateCards = document.querySelectorAll('.certificate-card');
-    
     // Accordion functionality
     const certAccordionButtons = document.querySelectorAll('.cert-accordion-button');
     certAccordionButtons.forEach(button => {
@@ -276,101 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.add('expanded');
             }
         });
-    });
-
-    // Carousel functionality for certificate pictures
-    certificateCards.forEach((card) => {
-        const id = card.querySelector('.carousel-viewport').id.replace('carousel-', '');
-        const carousel = document.getElementById(`carousel-${id}`);
-        const prevBtn = document.getElementById(`prev-${id}`);
-        const nextBtn = document.getElementById(`next-${id}`);
-        const counter = document.getElementById(`counter-${id}`);
-        const items = carousel.querySelectorAll('.carousel-item');
-        
-        // Tooltip functionality
-        const certificatePicture = card.querySelector('.certificate-picture');
-        const tooltip = certificatePicture.querySelector('.tooltip');
-        
-        certificatePicture.addEventListener('mousemove', function(e) {
-            if (window.innerWidth < 640) return; // Don't show tooltip on mobile
-            
-            const rect = certificatePicture.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            tooltip.style.display = 'block';
-            tooltip.style.left = `${x + 10}px`;
-            tooltip.style.top = `${y + 10}px`;
-        });
-        
-        certificatePicture.addEventListener('mouseleave', function() {
-            tooltip.style.display = 'none';
-        });
-        
-        if (items.length <= 1) return;
-        
-        let currentSlide = 0;
-        
-        // Hide prev button initially
-        if (prevBtn) prevBtn.style.display = 'none';
-        
-        // Update carousel UI
-        const updateCarousel = () => {
-            if (counter) counter.textContent = `${currentSlide + 1} / ${items.length}`;
-            
-            // Toggle navigation buttons based on current slide
-            if (prevBtn) prevBtn.style.display = currentSlide === 0 ? 'none' : 'flex';
-            if (nextBtn) nextBtn.style.display = currentSlide === items.length - 1 ? 'none' : 'flex';
-        };
-        
-        // Initialize the counter display
-        updateCarousel();
-        
-        // Set up intersection observer to detect current slide
-        const options = {
-            root: carousel,
-            rootMargin: '0px',
-            threshold: 0.5,
-        };
-        
-        const detectScroll = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    currentSlide = parseInt(entry.target.getAttribute('data-index'));
-                    updateCarousel();
-                }
-            });
-        };
-        
-        const observer = new IntersectionObserver(detectScroll, options);
-        items.forEach(item => observer.observe(item));
-        
-        // Navigation button handlers
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                    const containerWidth = carousel.clientWidth;
-                    carousel.scrollTo({
-                        left: currentSlide * containerWidth,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        }
-        
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                if (currentSlide < items.length - 1) {
-                    currentSlide++;
-                    const containerWidth = carousel.clientWidth;
-                    carousel.scrollTo({
-                        left: currentSlide * containerWidth,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        }
     });
 });
 </script>

@@ -6,15 +6,20 @@
         "jobTitle": "Full Stack AI Engineer",
         "jobTime": "August 2024 - March 2025",
         "jobCompany": "xFusion",
-        "jobCompanySite": "https://xfusion.io/",
+        "jobCompanySite": "https://xfusion.io",
         "jobActivities": [
-            "Built multi-agent AI responder system with Python, OpenAI, LangChain/LangGraph using RAG techniques, improving response accuracy by 65% and cutting manual drafting time by 75%.",
-            "Developed intelligent CSM inbox system with Next.js, TypeScript, Node.js integrating Gmail, Slack, and Fireflies, reducing communication management time by 40% and enabling focus on high-value customer interactions.",
-            "Designed serverless architecture on AWS Lambda using Node.js, TypeScript, and Python that scaled to handle 3x the original request volume while reducing infrastructure costs by 20%.",
-            "Optimized AI task management workflow with Linear API connecting support communications across platforms, resulting in 30% faster ticket resolution and 25% higher customer satisfaction scores.",
-            "Implemented ETL data pipelines with Snowflake, PostgreSQL, DynamoDB, and Pinecone vector databases, improving AI agent performance by 45% through optimized data processing.",
-            "Mentored junior developers on AI agent development, establishing code standards that reduced bug rates by 35% while leveraging AI tools (Cursor IDE, io.Dev) to boost team productivity.",
-            "Prototyped automated customer onboarding system that became foundation for company's AI workflow builder platform (similar to Zapier/Make.com)."
+            "Developed a multi-agent AI responder system that generates contextual replies from multiple sources, boosting response accuracy by 65% and reducing drafting time by 75%.",
+            "Implemented prompt engineering, evaluation metrics, and agentic decision logic improving AI agent performance.",
+            "Built an AI-powered inbox with a responder agent that filters low-priority messages across platforms, reducing management time by 40% by enabling users to handle all communications in one place.",
+            "Re-architected the serverless stack to auto-scale with concurrent, queue-based processing, enabling it to handle 3x the original request volume.",
+            "Optimized serverless code execution, resource allocation and third-party calls, cutting infrastructure costs by 20%.",
+            "Integrated an AI agent with Linear's API to automate 80% of task management, reducing manual workload by 30% and raising ticket resolution speed and customer satisfaction by 25%.",
+            "Developed parallel ETL pipelines that support batch and concurrent processing of emails, messages, and transcripts.",
+            "Optimized data flow to minimize errors and prevent data loss, boosting AI-agent performance and reliability by 45%.",
+            "Mentored junior developers through onboarding, task guidance, and ongoing support, reducing bugs by 35%.",
+            "Introduced and leveraged AI development tools to accelerate individual and team productivity, enabling faster task completion and higher daily progress.",
+            "Prototyped an automated customer-onboarding system that tracked progress and engaged customers through CSM accounts by sending weekly checkpoints and follow-ups.",
+            "Helped lay the foundation for the company's no-code AI workflow builder, enabling non-technical users to create custom automations and agents through a visual, node-based interface."
         ],
         "jobTechnologies": [
             {
@@ -50,14 +55,17 @@
         "jobTitle": "Lead Full Stack Developer",
         "jobTime": "April 2024 - Present",
         "jobCompany": "Bilis Delivery",
-        "jobCompanySite": "https://developkreativity.com/",
+        "jobCompanySite": "https://developkreativity.com",
         "jobActivities": [
-            "Built food delivery platform using Laravel backend and Flutter for mobile/web frontend that processed 10,000+ orders for 2,000+ active users with 99.9% uptime in the first year.",
-            "Implemented real-time order tracking and notification system using WebSockets and Google Maps API, enabling customers to monitor deliveries with high accuracy.",
-            "Integrated secure payment processing with multiple gateways (Credit Card, COD) and developed automated driver matching algorithm based on proximity and availability.",
-            "Created scalable backend with database optimization for consistent transaction handling, maintaining 99.9% uptime while processing 100+ concurrent orders during peak hours.",
-            "Designed role-based authentication system providing granular permission controls for customers, drivers, restaurant owners, and admins.",
-            "Created modular backend services for order management, driver assignment, and payment processing."
+            "Built a food-delivery platform that processed 10,000+ orders from 2,000+ users in its first year, leveraging Laravel queues and Redis for asynchronous workloads while maintaining 99.9% uptime at peak traffic.",
+            "Added real-time order tracking and notifications via WebSockets and the Google Maps API, enabling customers to monitor deliveries through push, SMS, in-app, and email alerts.",
+            "Integrated COD, credit-card, and in-app-wallet payments with secure transactions using Laravel Passport and OTP verification.",
+            "Created a zone-based driver-matching algorithm that filters drivers by location, vehicle compatibility, and live availability, accelerating driver assignment by 80%.",
+            "Scaled the backend by optimizing queries, adding indexes, and caching hot data in Redis, significantly reducing page-load times.",
+            "Employed batch processing, atomic transactions, and efficient upsert operations to handle 100+ concurrent orders during peak hours.",
+            "Designed a multi-guard authentication scheme with Laravel Passport and custom session-based guards for customers, drivers, vendors, and admins.",
+            "Implemented granular, module-level RBAC, with roles and permissions defined through JSON-configured modules in the database.",
+            "Structured the backend as a modular monolith using service interfaces and the nwidart/laravel-modules package to encapsulate business logic."
         ],
         "jobTechnologies": [
             {
@@ -97,10 +105,13 @@
         "jobTitle": "Co-Founder & Project Lead",
         "jobTime": "November 2023 - Present",
         "jobCompany": "Develop Kreativity",
-        "jobCompanySite": "https://developkreativity.com/",
+        "jobCompanySite": "https://developkreativity.com",
         "jobActivities": [
-            "Redesigned Lyons Global™ learning management system with interactive modules and approval-based registration using WordPress, reducing onboarding time by 60% and increasing user engagement by 45%.",
-            "Redesigned Lyons Global™ corporate website on WordPress, implementing responsive design patterns and optimizing performance scores from 65 to 95 on PageSpeed Insights."
+            "Revamped Lyons Global™'s learning-management system by migrating to modern WordPress and adding interactive modules with Tutor LMS and Restrict Content Pro.",
+            "Implemented approval-based registration, quizzes, activities, and checkpoints in the LMS, cutting onboarding time by 60% and boosting user engagement by 45%.",
+            "Redesigned Lyons Global™'s website, overhauling the UI/UX from Figma wireframes and enabling rapid iterations for faster development.",
+            "Built custom components in Elementor Pro—including a bespoke header and footer—and created custom post types for publications.",
+            "Optimized Lyons Global™'s site performance with responsive design and streamlined content management, raising the PageSpeed Insights score from 65 to 92."
         ],
         "jobTechnologies": [
             {
@@ -140,12 +151,12 @@
         "jobTitle": "Full Stack Developer",
         "jobTime": "July 2023 - Present",
         "jobCompany": "University of Southern Philippines Foundation",
-        "jobCompanySite": "https://uspf.edu.ph/",
+        "jobCompanySite": "https://uspf.edu.ph",
         "jobActivities": [
-            "Built AI chat agent with Python, OpenAI, and RAG techniques using ChromaDB vector database, achieving 85% query resolution accuracy and reducing staff support requests by 40%.",
-            "Designed distributed university platform on CodeIgniter 4 with Ionic Framework frontend, implementing real-time RFID tracking system, secure digital ID verification, and integrated financial management, improving service access by 35%.",
-            "Created queuing management system using Laravel and Vue.js, decreasing wait times by 80% across university service offices.",
-            "Optimized PowerEdge R440 server architecture and built internal document records system on Laravel with role-based access control, improving inter-departmental workflow efficiency by 60%."
+            "Developed a multi-agent AI chat system using a state-graph pipeline that delivers automated, context-aware responses, achieving 85% query-resolution accuracy and reducing support requests by 40%.",
+            "Built a university app that boosted service access by 35% by integrating digital ID/RFID tracking, statement-of-account retrieval from Pinnacle, and online payments through UnionBank and MLhuillier.",
+            "Reduced average wait times at university service offices by 80% by developing a queuing management system that replaced manual queues.",
+            "Upgraded a PowerEdge R440 server and locally deployed a document-records management system, eliminating manual storage and sharing and improving inter-departmental workflow by 60%."
         ],
         "jobTechnologies": [
             {
@@ -192,12 +203,13 @@
         "jobColor": "#0086eb",
         "jobTitle": "Back End Developer",
         "jobTime": "July 2021 - December 2021",
-        "jobCompany": "MyToolz.net",
-        "jobCompanySite": "https://mytoolz.net/tools/",
+        "jobCompany": "MyToolz",
+        "jobCompanySite": "https://mytoolz.net/tools",
         "jobActivities": [
-            "Refactored and optimized high-traffic Blogger website using JavaScript and PHP, implementing security measures that prevented link bypassing and improved platform integrity.",
-            "Developed modular PHP-based web tools including proxy validation services, email provider filters, cryptocurrency balance checker, and verification systems that streamlined third-party API integrations.",
-            "Designed and deployed security-focused backend APIs using PHP that improved validation process speed and enhanced overall platform reliability."
+            "Improved a high-traffic Blogger-based link locker by using an externally hosted API endpoint to securely handle URL masking using server-side encryption and database ID mapping, replacing insecure client-side base64 masking.",
+            "Integrated strict referrer validation to ensure only legitimate requests from the Blogger site could access protected content, resulting in a 70% reduction in content theft.",
+            "Developed a PHP-based API toolkit as a collection of custom tools, including proxy validation (via cURL and provider APIs), email validation and filtering with regex, cryptocurrency balance checks, and account verification.",
+            "Migrated core validation and utility features from third-party APIs to in-house solutions, reducing external API calls by 40% and improving system reliability."
         ],
         "jobTechnologies": [
             {

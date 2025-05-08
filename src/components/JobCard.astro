@@ -68,53 +68,59 @@ function calculateDuration(jobTime) {
             pointer-events: none;
         }
     }
-
-    .tooltip {
-        position: absolute;
-        display: none;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 3px 12px;
-        border-radius: 6px;
-        font-size: 0.875rem;
-        pointer-events: none;
-        z-index: 20;
-    }
 </style>
 
 <article class="job-card group relative flex flex-col pl-6 gap-4 sm:w-[50%] sm:even:translate-x-full pr-0 sm:odd:pl-0 odd:pr-6">
     <span class="circle gradient absolute top-0 left-[-10px] h-[24px] w-[24px] rounded-full z-[1]"></span>
-    <div class="job-picture top-0 p-2 flex flex-col justify-center items-center gap-4 sm:absolute h-[120px] w-[120px] object-contain rounded-3xl cursor-pointer relative">
-        {jobCompanySite ? (
-            <a href={jobCompanySite} target="_blank" rel="noopener noreferrer">
-                <img
-                    class="w-full h-auto"
-                    src={`/jobs/${jobPicture}`}
-                    alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
-                    loading="lazy"
-                />
-            </a>
-        ) : (
-            <img
-                class="w-full h-auto"
-                src={`/jobs/${jobPicture}`}
-                alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
-                loading="lazy"
-            />
-        )}
-        <div class="tooltip">View</div>
+    <div class="job-picture top-0 p-2 flex flex-col justify-center items-center gap-4 sm:absolute h-[120px] w-[120px] object-contain rounded-3xl relative">
+        <img
+            class="w-full h-auto"
+            src={`/jobs/${jobPicture}`}
+            alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
+            loading="lazy"
+        />
     </div>
     <div class="flex flex-col justify-center">
         <div class="flex flex-col mb-4">
             <h1 class="text-light-texto-primary dark:text-dark-texto-primary font-black text-xl">
                 {jobTitle}
             </h1>
-            <span
-                class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
-                style="display: inline-flex; align-items: center; gap: 4px;"
-            >
-                {jobCompany}
-            </span>
+            {jobCompanySite ? (
+                <a 
+                    href={jobCompanySite} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base hover:underline"
+                    style="display: inline-flex; align-items: center; gap: 4px;"
+                >
+                    {jobCompany}
+                    <svg
+                        class="inline text-light-gray-primary dark:text-dark-gray-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <polyline points="15 3 21 3 21 9" />
+                        <>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </>
+                    </svg>
+                </a>
+            ) : (
+                <span
+                    class="text-light-gray-primary dark:text-dark-gray-primary font-bold text-base"
+                    style="display: inline-flex; align-items: center; gap: 4px;"
+                >
+                    {jobCompany}
+                </span>
+            )}
             <small class="mt-1 text-light-gray-primary dark:text-dark-gray-primary italic text-[0.91rem]">
                 {jobTime} {calculateDuration(jobTime)}
             </small>
@@ -205,30 +211,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 target.style.maxHeight = target.scrollHeight + "px";
                 this.classList.add('expanded');
             }
-        });
-    });
-
-    // Tooltip functionality
-    const jobCards = document.querySelectorAll('.job-card');
-    
-    jobCards.forEach((card) => {
-        const jobPicture = card.querySelector('.job-picture');
-        const tooltip = jobPicture.querySelector('.tooltip');
-        
-        jobPicture.addEventListener('mousemove', function(e) {
-            if (window.innerWidth < 640) return; // Don't show tooltip on mobile
-            
-            const rect = jobPicture.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            tooltip.style.display = 'block';
-            tooltip.style.left = `${x + 10}px`;
-            tooltip.style.top = `${y + 10}px`;
-        });
-        
-        jobPicture.addEventListener('mouseleave', function() {
-            tooltip.style.display = 'none';
         });
     });
 });

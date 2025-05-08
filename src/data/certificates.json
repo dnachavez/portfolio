@@ -5,6 +5,7 @@
             "google-data-analytics-professional-certificate-v2.webp"
         ],
         "certificateTitle": "Google Data Analytics Professional Certificate",
+        "certificateSite": "https://www.credly.com/badges/4ce028b3-daec-457d-a607-631fb74b5e1e",
         "certificateTime": "April 2024",
         "certificateAwarder": "Google",
         "certificateDescription": "Completed comprehensive 8-course program covering end-to-end data analytics processes including data preparation, transformation, analysis, visualization, and strategic insights presentation. Developed advanced proficiency in SQL, R programming, and Tableau for enterprise-grade analytics solutions.",
@@ -24,7 +25,7 @@
         ],
         "certificateTitle": "CCS Days 2025 Hackathon",
         "certificateTime": "March 2025",
-        "certificateAwarder": "Mrs. Marie Joy Morano-Sanchez",
+        "certificateAwarder": "USPF College of Computer Studies",
         "certificateDescription": "Led the development of TESTify, an AI-powered exam integrity platform integrated with Canvas LMS that leverages computer vision and machine learning to detect academic dishonesty through facial recognition and behavioral pattern analysis, securing the Overall Champion award.",
         "certificateActivities": [
             "Awarded Hackathon Champion for technical excellence and solution completeness",
@@ -40,7 +41,7 @@
         ],
         "certificateTitle": "CCS Days 2023 Hackathon",
         "certificateTime": "December 2023",
-        "certificateAwarder": "Mr. Gian Carlo S. Cataraja, MIT",
+        "certificateAwarder": "USPF College of Computer Studies",
         "certificateDescription": "Built CERTify, an authentication system that implements blockchain-inspired verification, AI-powered forgery detection, and cryptographic security to ensure document integrity for academic credentials.",
         "certificateActivities": [
             "Awarded Champion of the Hackathon for the 1st year-3rd year category",
